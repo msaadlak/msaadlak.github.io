@@ -70,6 +70,7 @@ body
 
 .slide-text h1
 {
+	color: #000;
     line-height: 60px;
     font-size: 60px;
     margin-bottom: 18px;
@@ -77,6 +78,7 @@ body
 
 .slide-text p
 {
+	color: #000;
 	font-size: 17px;
 }
 
