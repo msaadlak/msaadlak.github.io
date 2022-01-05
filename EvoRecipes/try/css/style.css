@@ -65,7 +65,7 @@ body
 .slide-text
 {
 	color: #000;
-	margin-top: 80px;
+	margin-top: 30px;
 }
 
 .slide-text h1
@@ -443,7 +443,7 @@ footer {
 
 	.slide-text {
 	    color: #fff;
-    	margin-top: 35px;
+    	margin-top: 25px;
 	}
 	.slide-text p {
     	font-size: 12px;
