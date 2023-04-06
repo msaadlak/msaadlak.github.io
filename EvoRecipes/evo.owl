@@ -1,9 +1,9 @@
-@prefix : <https://purl.org/net/recipeon/> .
+@prefix : <https://purl.org/net/recipeon#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix po: <http://purl.obolibrary.org/obo/po.owl#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns/> .
+@prefix rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -117,25 +117,25 @@ qudt:hasUnit rdf:type owl:ObjectProperty ;
              rdfs:label "has unit"@en .
 
 
-###  http://schema.org/author
-<http://schema.org/author> rdf:type owl:ObjectProperty ;
-                           rdfs:domain <http://schema.org/Recipe> ;
-                           rdfs:range <http://schema.org/Person> ;
+###  https://schema.org/author
+<https://schema.org/author> rdf:type owl:ObjectProperty ;
+                           rdfs:domain <https://schema.org/Recipe> ;
+                           rdfs:range <https://schema.org/Person> ;
                            rdf:type owl:ObjectProperty ;
                            rdfs:label "author"@en .
 
 
-###  http://schema.org/cookTime
-<http://schema.org/cookTime> rdf:type owl:ObjectProperty ;
-                             rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/cookTime
+<https://schema.org/cookTime> rdf:type owl:ObjectProperty ;
+                             rdfs:domain <https://schema.org/Recipe> ;
                              rdfs:range qudt:Quantity ;
                              rdf:type owl:ObjectProperty ;
                              rdfs:label "cook time"@en .
 
 
-###  http://schema.org/hasPart
-<http://schema.org/hasPart> rdf:type owl:ObjectProperty ;
-                            rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/hasPart
+<https://schema.org/hasPart> rdf:type owl:ObjectProperty ;
+                            rdfs:domain <https://schema.org/Recipe> ;
                             rdfs:range [ rdf:type owl:Class ;
                                          owl:unionOf ( :Ingredient
                                                        :Procedure
@@ -144,33 +144,33 @@ qudt:hasUnit rdf:type owl:ObjectProperty ;
                             rdf:type owl:ObjectProperty .
 
 
-###  http://schema.org/nutrition
-<http://schema.org/nutrition> rdf:type owl:ObjectProperty ;
-                              rdfs:domain <http://schema.org/Recipe> ;
-                              rdfs:range <http://schema.org/NutritionInformation> ;
+###  https://schema.org/nutrition
+<https://schema.org/nutrition> rdf:type owl:ObjectProperty ;
+                              rdfs:domain <https://schema.org/Recipe> ;
+                              rdfs:range <https://schema.org/NutritionInformation> ;
                               rdf:type owl:ObjectProperty ;
                               rdfs:label "nutrition"@en .
 
 
-###  http://schema.org/prepTime
-<http://schema.org/prepTime> rdf:type owl:ObjectProperty ;
-                             rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/prepTime
+<https://schema.org/prepTime> rdf:type owl:ObjectProperty ;
+                             rdfs:domain <https://schema.org/Recipe> ;
                              rdfs:range qudt:Quantity ;
                              rdf:type owl:ObjectProperty ;
                              rdfs:label "prep time"@en .
 
 
-###  http://schema.org/totalTime
-<http://schema.org/totalTime> rdf:type owl:ObjectProperty ;
-                              rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/totalTime
+<https://schema.org/totalTime> rdf:type owl:ObjectProperty ;
+                              rdfs:domain <https://schema.org/Recipe> ;
                               rdfs:range qudt:Quantity ;
                               rdf:type owl:ObjectProperty ;
                               rdfs:label "total time"@en .
 
 
-###  http://schema.org/yield
-<http://schema.org/yield> rdf:type owl:ObjectProperty ;
-                          rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/yield
+<https://schema.org/yield> rdf:type owl:ObjectProperty ;
+                          rdfs:domain <https://schema.org/Recipe> ;
                           rdfs:range qudt:Quantity ;
                           rdf:type owl:ObjectProperty ;
                           rdfs:label "yield"@en .
@@ -278,8 +278,8 @@ owl:has_duration rdf:type owl:ObjectProperty ;
 
 ###  https://purl.org/net/recipeon/hasAggregateRating
 :hasAggregateRating rdf:type owl:ObjectProperty ;
-                    rdfs:domain <http://schema.org/Recipe> ;
-                    rdfs:range <http://schema.org/AggregateRating> ;
+                    rdfs:domain <https://schema.org/Recipe> ;
+                    rdfs:range <https://schema.org/AggregateRating> ;
                     rdf:type owl:FunctionalProperty ,
                              owl:ObjectProperty ;
                     rdfs:label "has aggregate rating"@en .
@@ -323,8 +323,8 @@ owl:has_duration rdf:type owl:ObjectProperty ;
 
 ###  https://purl.org/net/recipeon/hasIngredient
 :hasIngredient rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf <http://schema.org/hasPart> ;
-               rdfs:domain <http://schema.org/Recipe> ;
+               rdfs:subPropertyOf <https://schema.org/hasPart> ;
+               rdfs:domain <https://schema.org/Recipe> ;
                rdfs:range :Ingredient ;
                rdf:type owl:ObjectProperty ;
                rdfs:label "has ingredient"@en .
@@ -348,7 +348,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
 
 ###  https://purl.org/net/recipeon/hasNutrientType
 :hasNutrientType rdf:type owl:ObjectProperty ;
-                 rdfs:domain <http://schema.org/NutritionInformation> ;
+                 rdfs:domain <https://schema.org/NutritionInformation> ;
                  rdfs:range :Nutrient ;
                  rdf:type owl:ObjectProperty .
 
@@ -373,8 +373,8 @@ owl:has_duration rdf:type owl:ObjectProperty ;
 
 ###  https://purl.org/net/recipeon/hasProcedure
 :hasProcedure rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf <http://schema.org/hasPart> ;
-              rdfs:domain <http://schema.org/Recipe> ;
+              rdfs:subPropertyOf <https://schema.org/hasPart> ;
+              rdfs:domain <https://schema.org/Recipe> ;
               rdfs:range :Procedure ;
               rdf:type owl:ObjectProperty ;
               rdfs:label "has procedure"@en .
@@ -441,113 +441,113 @@ qudt:hasNumericValue rdf:type owl:DatatypeProperty ;
                      rdfs:label "has numeric value"@en .
 
 
-###  http://schema.org/cookingMethod
-<http://schema.org/cookingMethod> rdf:type owl:DatatypeProperty ;
-                                  rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/cookingMethod
+<https://schema.org/cookingMethod> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain <https://schema.org/Recipe> ;
                                   rdfs:range xsd:string ;
                                   rdf:type owl:DatatypeProperty ;
                                   rdfs:label "Cooking Method"@en .
 
 
-###  http://schema.org/datePublished
-<http://schema.org/datePublished> rdf:type owl:DatatypeProperty ;
-                                  rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/datePublished
+<https://schema.org/datePublished> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain <https://schema.org/Recipe> ;
                                   rdfs:range xsd:string ;
                                   rdf:type owl:DatatypeProperty ;
                                   rdfs:label "Date Published"@en .
 
 
-###  http://schema.org/email
-<http://schema.org/email> rdf:type owl:DatatypeProperty ;
-                          rdfs:domain <http://schema.org/Person> ;
+###  https://schema.org/email
+<https://schema.org/email> rdf:type owl:DatatypeProperty ;
+                          rdfs:domain <https://schema.org/Person> ;
                           rdfs:range xsd:string ;
                           rdf:type owl:DatatypeProperty ;
                           rdfs:label "email"@en .
 
 
-###  http://schema.org/givenName
-<http://schema.org/givenName> rdf:type owl:DatatypeProperty ;
-                              rdfs:domain <http://schema.org/Person> ;
+###  https://schema.org/givenName
+<https://schema.org/givenName> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <https://schema.org/Person> ;
                               rdfs:range xsd:string ;
                               rdf:type owl:DatatypeProperty ;
                               rdfs:label "given name"@en .
 
 
-###  http://schema.org/keywords
-<http://schema.org/keywords> rdf:type owl:DatatypeProperty ;
-                             rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/keywords
+<https://schema.org/keywords> rdf:type owl:DatatypeProperty ;
+                             rdfs:domain <https://schema.org/Recipe> ;
                              rdfs:range xsd:string ;
                              rdf:type owl:DatatypeProperty ;
                              rdfs:label "key words"@en .
 
 
-###  http://schema.org/ratingCount
-<http://schema.org/ratingCount> rdf:type owl:DatatypeProperty ;
-                                rdfs:domain <http://schema.org/AggregateRating> ;
+###  https://schema.org/ratingCount
+<https://schema.org/ratingCount> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <https://schema.org/AggregateRating> ;
                                 rdfs:range xsd:integer ;
                                 rdf:type owl:DatatypeProperty ;
                                 rdfs:label "rating count"@en .
 
 
-###  http://schema.org/recipeCategory
-<http://schema.org/recipeCategory> rdf:type owl:DatatypeProperty ;
-                                   rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/recipeCategory
+<https://schema.org/recipeCategory> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <https://schema.org/Recipe> ;
                                    rdfs:range xsd:string ;
                                    rdf:type owl:DatatypeProperty ;
                                    rdfs:label "recipe category"@en .
 
 
-###  http://schema.org/recipeCuisine
-<http://schema.org/recipeCuisine> rdf:type owl:DatatypeProperty ;
-                                  rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/recipeCuisine
+<https://schema.org/recipeCuisine> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain <https://schema.org/Recipe> ;
                                   rdfs:range xsd:string ;
                                   rdf:type owl:DatatypeProperty ;
                                   rdfs:label "recipe cusine"@en .
 
 
-###  http://schema.org/recipeYield
-<http://schema.org/recipeYield> rdf:type owl:DatatypeProperty ;
-                                rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/recipeYield
+<https://schema.org/recipeYield> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <https://schema.org/Recipe> ;
                                 rdfs:range xsd:integer ;
                                 rdf:type owl:DatatypeProperty ;
                                 rdfs:label "recipe yield"@en .
 
 
-###  http://schema.org/reviewCount
-<http://schema.org/reviewCount> rdf:type owl:DatatypeProperty ;
-                                rdfs:domain <http://schema.org/AggregateRating> ;
+###  https://schema.org/reviewCount
+<https://schema.org/reviewCount> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <https://schema.org/AggregateRating> ;
                                 rdfs:range xsd:integer ;
                                 rdf:type owl:DatatypeProperty ;
                                 rdfs:label "review count"@en .
 
 
-###  http://schema.org/servingSize
-<http://schema.org/servingSize> rdf:type owl:DatatypeProperty ;
-                                rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/servingSize
+<https://schema.org/servingSize> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <https://schema.org/Recipe> ;
                                 rdfs:range xsd:double ;
                                 rdf:type owl:DatatypeProperty ;
                                 rdfs:label "serving size"@en .
 
 
-###  http://schema.org/suitableForDiet
-<http://schema.org/suitableForDiet> rdf:type owl:DatatypeProperty ;
-                                    rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/suitableForDiet
+<https://schema.org/suitableForDiet> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <https://schema.org/Recipe> ;
                                     rdfs:range xsd:string ;
                                     rdf:type owl:DatatypeProperty ;
                                     rdfs:label "suitable for diet"@en .
 
 
-###  http://schema.org/tool
-<http://schema.org/tool> rdf:type owl:DatatypeProperty ;
-                         rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/tool
+<https://schema.org/tool> rdf:type owl:DatatypeProperty ;
+                         rdfs:domain <https://schema.org/Recipe> ;
                          rdfs:range xsd:string ;
                          rdf:type owl:DatatypeProperty ;
                          rdfs:label "tool"@en .
 
 
-###  http://schema.org/url
-<http://schema.org/url> rdf:type owl:DatatypeProperty ;
-                        rdfs:domain <http://schema.org/Recipe> ;
+###  https://schema.org/url
+<https://schema.org/url> rdf:type owl:DatatypeProperty ;
+                        rdfs:domain <https://schema.org/Recipe> ;
                         rdfs:range xsd:string ;
                         rdf:type owl:DatatypeProperty ;
                         rdfs:label "url"@en .
@@ -555,7 +555,7 @@ qudt:hasNumericValue rdf:type owl:DatatypeProperty ;
 
 ###  https://purl.org/net/recipeon/hasCourseName
 :hasCourseName rdf:type owl:DatatypeProperty ;
-               rdfs:domain <http://schema.org/Recipe> ;
+               rdfs:domain <https://schema.org/Recipe> ;
                rdfs:range xsd:string ;
                rdf:type owl:DatatypeProperty ;
                rdfs:label "has course name"@en .
@@ -563,7 +563,7 @@ qudt:hasNumericValue rdf:type owl:DatatypeProperty ;
 
 ###  https://purl.org/net/recipeon/hasDifficultyLevel
 :hasDifficultyLevel rdf:type owl:DatatypeProperty ;
-                    rdfs:domain <http://schema.org/Recipe> ;
+                    rdfs:domain <https://schema.org/Recipe> ;
                     rdfs:range xsd:string ;
                     rdf:type owl:DatatypeProperty ;
                     rdfs:label "has difficulty level"@en .
@@ -571,7 +571,7 @@ qudt:hasNumericValue rdf:type owl:DatatypeProperty ;
 
 ###  https://purl.org/net/recipeon/hasMealType
 :hasMealType rdf:type owl:DatatypeProperty ;
-             rdfs:domain <http://schema.org/Recipe> ;
+             rdfs:domain <https://schema.org/Recipe> ;
              rdfs:range xsd:string ;
              rdf:type owl:DatatypeProperty ;
              rdfs:label "has meal type"@en .
@@ -964,15 +964,15 @@ qudt:Unit rdf:type owl:Class ;
           rdfs:label "Unit"^^xsd:string .
 
 
-###  http://schema.org/AggregateRating
-<http://schema.org/AggregateRating> rdf:type owl:Class ;
+###  https://schema.org/AggregateRating
+<https://schema.org/AggregateRating> rdf:type owl:Class ;
                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://schema.org/ratingCount> ;
+                                                      owl:onProperty <https://schema.org/ratingCount> ;
                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                       owl:onDataRange xsd:integer
                                                     ] ,
                                                     [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <http://schema.org/reviewCount> ;
+                                                      owl:onProperty <https://schema.org/reviewCount> ;
                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                       owl:onDataRange xsd:integer
                                                     ] ;
@@ -982,8 +982,8 @@ qudt:Unit rdf:type owl:Class ;
                                     rdfs:label "AggregateRating"^^xsd:string .
 
 
-###  http://schema.org/NutritionInformation
-<http://schema.org/NutritionInformation> rdf:type owl:Class ;
+###  https://schema.org/NutritionInformation
+<https://schema.org/NutritionInformation> rdf:type owl:Class ;
                                          rdf:about "https://schema.org/NutritionInformation"@en ;
                                          rdf:type owl:Class ;
                                          rdfs:comment "Nutritional information about the recipe."@en ;
@@ -991,15 +991,15 @@ qudt:Unit rdf:type owl:Class ;
                                          rdfs:label "NuitritionInformation"^^xsd:string .
 
 
-###  http://schema.org/Person
-<http://schema.org/Person> rdf:type owl:Class ;
+###  https://schema.org/Person
+<https://schema.org/Person> rdf:type owl:Class ;
                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/email> ;
+                                             owl:onProperty <https://schema.org/email> ;
                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:string
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/givenName> ;
+                                             owl:onProperty <https://schema.org/givenName> ;
                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:string
                                            ] ;
@@ -1010,60 +1010,60 @@ qudt:Unit rdf:type owl:Class ;
                            rdfs:label "Person"^^xsd:string .
 
 
-###  http://schema.org/Recipe
-<http://schema.org/Recipe> rdf:type owl:Class ;
+###  https://schema.org/Recipe
+<https://schema.org/Recipe> rdf:type owl:Class ;
                            rdfs:subClassOf [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasIngredient ;
                                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onClass :Ingredient
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/author> ;
+                                             owl:onProperty <https://schema.org/author> ;
                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                             owl:onClass <http://schema.org/Person>
+                                             owl:onClass <https://schema.org/Person>
                                            ] ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasAggregateRating ;
                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                             owl:onClass <http://schema.org/AggregateRating>
+                                             owl:onClass <https://schema.org/AggregateRating>
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/cookTime> ;
+                                             owl:onProperty <https://schema.org/cookTime> ;
                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onClass qudt:Quantity
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/prepTime> ;
+                                             owl:onProperty <https://schema.org/prepTime> ;
                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onClass qudt:Quantity
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/totalTime> ;
+                                             owl:onProperty <https://schema.org/totalTime> ;
                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onClass qudt:Quantity
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/yield> ;
+                                             owl:onProperty <https://schema.org/yield> ;
                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onClass qudt:Quantity
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/datePublished> ;
+                                             owl:onProperty <https://schema.org/datePublished> ;
                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:string
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/recipeCuisine> ;
+                                             owl:onProperty <https://schema.org/recipeCuisine> ;
                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:string
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/recipeYield> ;
+                                             owl:onProperty <https://schema.org/recipeYield> ;
                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:integer
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/url> ;
+                                             owl:onProperty <https://schema.org/url> ;
                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:string
                                            ] ,
@@ -1073,27 +1073,27 @@ qudt:Unit rdf:type owl:Class ;
                                              owl:onDataRange xsd:string
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/cookingMethod> ;
+                                             owl:onProperty <https://schema.org/cookingMethod> ;
                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:string
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/keywords> ;
+                                             owl:onProperty <https://schema.org/keywords> ;
                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:string
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/recipeCategory> ;
+                                             owl:onProperty <https://schema.org/recipeCategory> ;
                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:string
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/servingSize> ;
+                                             owl:onProperty <https://schema.org/servingSize> ;
                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:double
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://schema.org/suitableForDiet> ;
+                                             owl:onProperty <https://schema.org/suitableForDiet> ;
                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:string
                                            ] ,
@@ -2757,9 +2757,9 @@ Save"""@en ;
 
 
 ###  https://purl.org/net/recipeon/AR
-:AR <http://schema.org/ratingCount> 5 ;
-    <http://schema.org/reviewCount> 5 ;
-    a <http://schema.org/AggregateRating> .
+:AR <https://schema.org/ratingCount> 5 ;
+    <https://schema.org/reviewCount> 5 ;
+    a <https://schema.org/AggregateRating> .
 
 
 ###  https://purl.org/net/recipeon/Add
@@ -2853,9 +2853,9 @@ Save"""@en ;
 
 
 ###  https://purl.org/net/recipeon/Lorraine
-:Lorraine <http://schema.org/datePublished> "27-1-2009"^^xsd:string ;
-          <http://schema.org/givenName> "Lorraine L"^^xsd:string ;
-          a <http://schema.org/Person> .
+:Lorraine <https://schema.org/datePublished> "27-1-2009"^^xsd:string ;
+          <https://schema.org/givenName> "Lorraine L"^^xsd:string ;
+          a <https://schema.org/Person> .
 
 
 ###  https://purl.org/net/recipeon/Main
@@ -2881,8 +2881,8 @@ Save"""@en ;
 
 
 ###  https://purl.org/net/recipeon/ROAST-BEEF-DIP-SANDWICH-WITH-HERBED-GARLIC-AU-JUS
-:ROAST-BEEF-DIP-SANDWICH-WITH-HERBED-GARLIC-AU-JUS a <http://schema.org/Recipe> ;
-			<http://schema.org/author> :Lorraine ;
+:ROAST-BEEF-DIP-SANDWICH-WITH-HERBED-GARLIC-AU-JUS a <https://schema.org/Recipe> ;
+			<https://schema.org/author> :Lorraine ;
                                                    :hasAggregateRating :AR ;
                                                    :hasIngredient :BeefBroth ,
                                                                   :FrenchBaguette ,
@@ -2896,13 +2896,13 @@ Save"""@en ;
                                                                   :WorcestershireSauce ,
 				  :Thyme ,
 				  :Basil	;
-                                                   <http://schema.org/recipeCuisine> "French"^^xsd:string ;
-                                                   <http://schema.org/recipeYield> 4 ;
-                                                   <http://schema.org/servingSize> "4.0"^^xsd:double ;
-                                                   <http://schema.org/url> "https://www.food.com/recipe/roast-beef-dip-sandwich-with-herbed-garlic-au-jus-352204"^^xsd:string .
+                                                   <https://schema.org/recipeCuisine> "French"^^xsd:string ;
+                                                   <https://schema.org/recipeYield> 4 ;
+                                                   <https://schema.org/servingSize> "4.0"^^xsd:double ;
+                                                   <https://schema.org/url> "https://www.food.com/recipe/roast-beef-dip-sandwich-with-herbed-garlic-au-jus-352204"^^xsd:string .
 
-:Quorma a <http://schema.org/Recipe> ;
-			<http://schema.org/author> :Mine ;
+:Quorma a <https://schema.org/Recipe> ;
+			<https://schema.org/author> :Mine ;
                                                    :hasIngredient :Chicken ,
                                                                   :Yougurt ,
                                                                   :Ginger .
