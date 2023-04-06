@@ -2832,7 +2832,7 @@ Save"""@en ;
 
 
 ###  https://purl.org/net/recipeon/GarlicAndHerbBoursinCheese
-:GarlicAndHerbBoursinCheese :hasMainIngredient :Main ;
+:GarlicAndHerbBoursinCheese :hasMainIngredient :MainIngredient ;
                             :hasPreparatoryAction :Spread ;
                             :hasQuantity :1Package ;
                             a :Cheese .
@@ -2920,7 +2920,7 @@ Save"""@en ;
 
 
 ###  https://purl.org/net/recipeon/RoastBeef
-:RoastBeef :hasMainIngredient :Main ;
+:RoastBeef :hasMainIngredient :MainIngredient ;
            :hasPreparatoryAction :Divide ;
            :hasQuantity :1Lb ;
            a :Beef .
