@@ -14,7 +14,7 @@
 @base <https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl> .
 
 <https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl> a owl:Ontology ;
-                                        owl:versionIRI <https://purl.org/net/recipeon/v/1.0> ;
+                                        owl:versionIRI <https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#v/1.0> ;
                                         dc:publisher "Recipe Evolution Group" ;
                                         dc:title "RecipeOn Ontology" ;
                                         terms:contributor <https://hajirajabeen.github.io> ,
@@ -28,7 +28,7 @@
                                         terms:modified "2023/03/22" ;
                                         terms:title "The RecipeOn Ontology (recipeon)"@en ;
                                         rdfs:comment "RecipeOn assists machines in understanding the semantics of recipes to encode the information crucial for personalized recipe generation. This includes nutritional information, ingredient-action relations, ingredient-diet relations, ingredient substitutions, and cooking time." ;
-                                        rdfs:isDefinedBy <https://purl.org/net/recipeon> ;
+                                        rdfs:isDefinedBy <https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl> ;
                                         rdfs:label "The RecipeOn Ontology"@en ;
                                         rdfs:seeAlso <https://hajirajabeen.github.io/EvoRecipesOntology/> .
 
@@ -224,7 +224,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                  rdfs:label "has duration"@en .
 
 
-###  https://purl.org/net/recipeon/alternateAction
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#alternateAction
 :alternateAction rdf:type owl:ObjectProperty ;
                  rdfs:domain owl:Action ;
                  rdfs:range owl:Action ;
@@ -233,7 +233,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                  rdfs:label "Alternate Action"@en .
 
 
-###  https://purl.org/net/recipeon/directlyFollowsProcedure
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#directlyFollowsProcedure
 :directlyFollowsProcedure rdf:type owl:ObjectProperty ;
                           owl:inverseOf :directlyPrecedesProcedure ;
                           rdfs:domain :Procedure ;
@@ -242,7 +242,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                           rdfs:label "directly follows procedures"@en .
 
 
-###  https://purl.org/net/recipeon/directlyPrecedesProcedure
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#directlyPrecedesProcedure
 :directlyPrecedesProcedure rdf:type owl:ObjectProperty ;
                            rdfs:domain :Procedure ;
                            rdfs:range :Procedure ;
@@ -250,7 +250,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                            rdfs:label "directly precedes procedure"@en .
 
 
-###  https://purl.org/net/recipeon/hasAction
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasAction
 :hasAction rdf:type owl:ObjectProperty ;
            owl:inverseOf :hasActionIngredient ;
            rdfs:domain :Ingredient ;
@@ -259,7 +259,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
            rdfs:label "has action"@en .
 
 
-###  https://purl.org/net/recipeon/hasActionIngredient
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasActionIngredient
 :hasActionIngredient rdf:type owl:ObjectProperty ;
                      rdfs:domain owl:Action ;
                      rdfs:range :Ingredient ;
@@ -267,7 +267,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                      rdfs:label "has action ingredient"@en .
 
 
-###  https://purl.org/net/recipeon/hasActionProcedure
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasActionProcedure
 :hasActionProcedure rdf:type owl:ObjectProperty ;
                     owl:inverseOf :hasProcedureAction ;
                     rdfs:domain owl:Action ;
@@ -276,7 +276,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                     rdfs:label "has action procedure"@en .
 
 
-###  https://purl.org/net/recipeon/hasAggregateRating
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasAggregateRating
 :hasAggregateRating rdf:type owl:ObjectProperty ;
                     rdfs:domain <https://schema.org/Recipe> ;
                     rdfs:range <https://schema.org/AggregateRating> ;
@@ -285,7 +285,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                     rdfs:label "has aggregate rating"@en .
 
 
-###  https://purl.org/net/recipeon/hasAlternateIngredient
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasAlternateIngredient
 :hasAlternateIngredient rdf:type owl:ObjectProperty ;
                         rdfs:domain :Ingredient ;
                         rdfs:range :Ingredient ;
@@ -294,7 +294,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                         rdfs:label "has alternate ingredient"@en .
 
 
-###  https://purl.org/net/recipeon/hasAlternateProcedure
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasAlternateProcedure
 :hasAlternateProcedure rdf:type owl:ObjectProperty ;
                        rdfs:domain :Procedure ;
                        rdfs:range :Procedure ;
@@ -303,7 +303,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                        rdfs:label "has alternate procedure"@en .
 
 
-###  https://purl.org/net/recipeon/hasCookingAction
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasCookingAction
 :hasCookingAction rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :hasAction ;
                   rdfs:domain :Ingredient ;
@@ -312,7 +312,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                   rdfs:label "has cooking action"@en .
 
 
-###  https://purl.org/net/recipeon/hasFlavorIngredient
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasFlavorIngredient
 :hasFlavorIngredient rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :hasType ;
                      rdfs:domain :Ingredient ;
@@ -321,7 +321,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                      rdfs:label "has flavor ingredient"@en .
 
 
-###  https://purl.org/net/recipeon/hasIngredient
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasIngredient
 :hasIngredient rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf <https://schema.org/hasPart> ;
                rdfs:domain <https://schema.org/Recipe> ;
@@ -330,7 +330,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                rdfs:label "has ingredient"@en .
 
 
-###  https://purl.org/net/recipeon/hasMainIngredient
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasMainIngredient
 :hasMainIngredient rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasType ;
                    rdfs:domain :Ingredient ;
@@ -339,21 +339,21 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                    rdfs:label "has main ingredient"@en .
 
 
-###  https://purl.org/net/recipeon/hasNutrientQuantity
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasNutrientQuantity
 :hasNutrientQuantity rdf:type owl:ObjectProperty ;
                      rdfs:domain :Nutrient ;
                      rdfs:range qudt:Quantity ;
                      rdf:type owl:ObjectProperty .
 
 
-###  https://purl.org/net/recipeon/hasNutrientType
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasNutrientType
 :hasNutrientType rdf:type owl:ObjectProperty ;
                  rdfs:domain <https://schema.org/NutritionInformation> ;
                  rdfs:range :Nutrient ;
                  rdf:type owl:ObjectProperty .
 
 
-###  https://purl.org/net/recipeon/hasPostCookingAction
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasPostCookingAction
 :hasPostCookingAction rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :hasAction ;
                       rdfs:domain :Ingredient ;
@@ -362,7 +362,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                       rdfs:label "has post cooking action"@en .
 
 
-###  https://purl.org/net/recipeon/hasPreparatoryAction
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasPreparatoryAction
 :hasPreparatoryAction rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :hasAction ;
                       rdfs:domain :Ingredient ;
@@ -371,7 +371,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                       rdfs:label "has preparatory action"@en .
 
 
-###  https://purl.org/net/recipeon/hasProcedure
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasProcedure
 :hasProcedure rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <https://schema.org/hasPart> ;
               rdfs:domain <https://schema.org/Recipe> ;
@@ -380,7 +380,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
               rdfs:label "has procedure"@en .
 
 
-###  https://purl.org/net/recipeon/hasProcedureAction
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasProcedureAction
 :hasProcedureAction rdf:type owl:ObjectProperty ;
                     rdfs:domain :Procedure ;
                     rdfs:range owl:Action ;
@@ -388,7 +388,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                     rdfs:label "has procedure action"@en .
 
 
-###  https://purl.org/net/recipeon/hasProcedureIngredient
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasProcedureIngredient
 :hasProcedureIngredient rdf:type owl:ObjectProperty ;
                         rdfs:domain :Procedure ;
                         rdfs:range :Ingredient ;
@@ -396,7 +396,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                         rdfs:label "hasProcedureAction"@en .
 
 
-###  https://purl.org/net/recipeon/hasQuantity
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasQuantity
 :hasQuantity rdf:type owl:ObjectProperty ;
              rdfs:domain :Ingredient ;
              rdfs:range qudt:Quantity ;
@@ -404,7 +404,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
              rdfs:label "has quantity"@en .
 
 
-###  https://purl.org/net/recipeon/hasSideIngredient
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasSideIngredient
 :hasSideIngredient rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasType ;
                    rdfs:domain :Ingredient ;
@@ -413,7 +413,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                    rdfs:label "has side ingredient"@en .
 
 
-###  https://purl.org/net/recipeon/hasType
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasType
 :hasType rdf:type owl:ObjectProperty ;
          rdfs:domain :Ingredient ;
          rdfs:range :IngredientType ;
@@ -553,7 +553,7 @@ qudt:hasNumericValue rdf:type owl:DatatypeProperty ;
                         rdfs:label "url"@en .
 
 
-###  https://purl.org/net/recipeon/hasCourseName
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasCourseName
 :hasCourseName rdf:type owl:DatatypeProperty ;
                rdfs:domain <https://schema.org/Recipe> ;
                rdfs:range xsd:string ;
@@ -561,7 +561,7 @@ qudt:hasNumericValue rdf:type owl:DatatypeProperty ;
                rdfs:label "has course name"@en .
 
 
-###  https://purl.org/net/recipeon/hasDifficultyLevel
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasDifficultyLevel
 :hasDifficultyLevel rdf:type owl:DatatypeProperty ;
                     rdfs:domain <https://schema.org/Recipe> ;
                     rdfs:range xsd:string ;
@@ -569,7 +569,7 @@ qudt:hasNumericValue rdf:type owl:DatatypeProperty ;
                     rdfs:label "has difficulty level"@en .
 
 
-###  https://purl.org/net/recipeon/hasMealType
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasMealType
 :hasMealType rdf:type owl:DatatypeProperty ;
              rdfs:domain <https://schema.org/Recipe> ;
              rdfs:range xsd:string ;
@@ -577,7 +577,7 @@ qudt:hasNumericValue rdf:type owl:DatatypeProperty ;
              rdfs:label "has meal type"@en .
 
 
-###  https://purl.org/net/recipeon/hasNutrientName
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasNutrientName
 :hasNutrientName rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Nutrient ;
                  rdfs:range xsd:string ;
@@ -1144,14 +1144,14 @@ owl:Action rdf:type owl:Class ;
            rdfs:label "Action"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Alcohol
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Alcohol
 :Alcohol rdf:type owl:Class ;
          rdfs:subClassOf :Liquids ;
          rdf:type owl:Class ;
          rdfs:label "Alcohol"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Apple
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Apple
 :Apple rdf:type owl:Class ;
        rdfs:subClassOf :PomeFruit ;
        owl:disjointWith :Pear ;
@@ -1159,7 +1159,7 @@ owl:Action rdf:type owl:Class ;
        rdfs:label "Apple"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Apply
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Apply
 :Apply rdf:type owl:Class ;
        rdfs:subClassOf :Preparatory ;
        rdf:type owl:Class ;
@@ -1173,7 +1173,7 @@ Butter"""^^xsd:string ;
        rdfs:label "Apply"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/AsianNoodle
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#AsianNoodle
 :AsianNoodle rdf:type owl:Class ;
              rdfs:subClassOf :GrainProducts ;
              rdf:about "https://en.wikipedia.org/wiki/Noodle"@en ;
@@ -1182,33 +1182,33 @@ Butter"""^^xsd:string ;
              rdfs:label "Asian Noodle"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/AsianSquash
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#AsianSquash
 :AsianSquash rdf:type owl:Class ;
              rdfs:subClassOf :FruitVegetables ;
              rdf:type owl:Class ;
              rdfs:label "Asian Squash"@en .
 
 
-###  https://purl.org/net/recipeon/Avocados
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Avocados
 :Avocados rdf:type owl:Class ;
           rdfs:subClassOf :FruitVegetables ;
           rdf:type owl:Class ;
           rdfs:label "Avocados"@en .
 
 
-###  https://purl.org/net/recipeon/Bacon
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Bacon
 :Bacon rdf:type owl:Class ;
        rdfs:subClassOf :CurvedMeats ;
        rdf:type owl:Class ;
        rdfs:label "Bacon"@en .
 
 
-###  https://purl.org/net/recipeon/Bake
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Bake
 :Bake rdf:type owl:Class ;
       rdfs:subClassOf :Cooking .
 
 
-###  https://purl.org/net/recipeon/BakedGoods
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#BakedGoods
 :BakedGoods rdf:type owl:Class ;
             rdfs:subClassOf :Ingredient ;
             rdf:about "Baked goods are foods made from dough or batter and cooked by baking, a method of cooking food that uses prolonged dry heat, normally in an oven, but also in hot ashes, or on hot stones."@en ,
@@ -1217,7 +1217,7 @@ Butter"""^^xsd:string ;
             rdfs:label "Baked Goods"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Barley
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Barley
 :Barley rdf:type owl:Class ;
         rdfs:subClassOf :Grains ;
         rdf:about "https://en.wikipedia.org/wiki/Barley"@en ;
@@ -1226,14 +1226,14 @@ Butter"""^^xsd:string ;
         rdfs:label "Barley"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/BeanProducts
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#BeanProducts
 :BeanProducts rdf:type owl:Class ;
               rdfs:subClassOf :Legumes ;
               rdf:type owl:Class ;
               rdfs:label "BeanProducts"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Beef
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Beef
 :Beef rdf:type owl:Class ;
       rdfs:subClassOf :Meats ;
       rdf:about "https://en.wikipedia.org/wiki/Beef"@en ;
@@ -1242,7 +1242,7 @@ Butter"""^^xsd:string ;
       rdfs:label "Beef"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Bend
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Bend
 :Bend rdf:type owl:Class ;
       rdfs:subClassOf :Preparatory ;
       rdf:type owl:Class ;
@@ -1257,7 +1257,7 @@ Unmold"""@en ;
       rdfs:label "Bend"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Berries
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Berries
 :Berries rdf:type owl:Class ;
          rdfs:subClassOf :Fruits ;
          rdf:about "https://en.wikipedia.org/wiki/Berry"@en ;
@@ -1266,14 +1266,14 @@ Unmold"""@en ;
          rdfs:label "Berries"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/BlueCheese
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#BlueCheese
 :BlueCheese rdf:type owl:Class ;
             rdfs:subClassOf :Cheese ;
             rdf:type owl:Class ;
             rdfs:label "Blue Cheese"@en .
 
 
-###  https://purl.org/net/recipeon/Boil
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Boil
 :Boil rdf:type owl:Class ;
       rdfs:subClassOf :Cooking ;
       rdf:about "https://en.wikipedia.org/wiki/Boiling"@en ;
@@ -1282,7 +1282,7 @@ Unmold"""@en ;
       rdfs:label "Boil"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Bread
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Bread
 :Bread rdf:type owl:Class ;
        rdfs:subClassOf :BakedGoods ;
        rdf:about "https://en.wikipedia.org/wiki/Bread"@en ;
@@ -1291,7 +1291,7 @@ Unmold"""@en ;
        rdfs:label "Bread"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/BuckWheat
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#BuckWheat
 :BuckWheat rdf:type owl:Class ;
            rdfs:subClassOf :Grains ;
            rdf:about "https://en.wikipedia.org/wiki/Buckwheat"@en ;
@@ -1300,7 +1300,7 @@ Unmold"""@en ;
            rdfs:label "Buck Wheat"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Bulb
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Bulb
 :Bulb rdf:type owl:Class ;
       rdfs:subClassOf :Vegetable ;
       rdf:type owl:Class ;
@@ -1308,7 +1308,7 @@ Unmold"""@en ;
       rdfs:label "Bulb"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Burn
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Burn
 :Burn rdf:type owl:Class ;
       rdfs:subClassOf :Cooking ;
       rdf:about "https://dictionary.cambridge.org/us/thesaurus/articles/to-burn-food"@en ;
@@ -1321,7 +1321,7 @@ Glaze: A glaze is a sauce that is cooked onto a protein or vegetable so that the
       rdfs:label "Burn"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Cake
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cake
 :Cake rdf:type owl:Class ;
       rdfs:subClassOf :BakedGoods ;
       rdf:about "https://en.wikipedia.org/wiki/Cake"@en ;
@@ -1330,21 +1330,21 @@ Glaze: A glaze is a sauce that is cooked onto a protein or vegetable so that the
       rdfs:label "Cake"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Candy
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Candy
 :Candy rdf:type owl:Class ;
        rdfs:subClassOf :Flavorings ;
        rdf:type owl:Class ;
        rdfs:label "Candy"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/CaviarRoe
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CaviarRoe
 :CaviarRoe rdf:type owl:Class ;
            rdfs:subClassOf :Fish ;
            rdf:type owl:Class ;
            rdfs:label "Caviar Roe"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Cheese
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cheese
 :Cheese rdf:type owl:Class ;
         rdfs:subClassOf :Dairy ;
         rdf:about "https://en.wikipedia.org/wiki/Cheese"@en ;
@@ -1353,14 +1353,14 @@ Glaze: A glaze is a sauce that is cooked onto a protein or vegetable so that the
         rdfs:label "Cheese"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/CheeseSubstitute
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CheeseSubstitute
 :CheeseSubstitute rdf:type owl:Class ;
                   rdfs:subClassOf :Cheese ;
                   rdf:type owl:Class ;
                   rdfs:label "Cheese Substitute"@en .
 
 
-###  https://purl.org/net/recipeon/Chocolate
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Chocolate
 :Chocolate rdf:type owl:Class ;
            rdfs:subClassOf :Flavorings ;
            rdf:about "https://en.wikipedia.org/wiki/Chocolate"@en ;
@@ -1369,7 +1369,7 @@ Glaze: A glaze is a sauce that is cooked onto a protein or vegetable so that the
            rdfs:label "Chocolate"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/CitrusFruit
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CitrusFruit
 :CitrusFruit rdf:type owl:Class ;
              rdfs:subClassOf :Fruits ;
              rdf:about "https://en.wikipedia.org/wiki/Citrus#Fruit"@en ;
@@ -1378,7 +1378,7 @@ Glaze: A glaze is a sauce that is cooked onto a protein or vegetable so that the
              rdfs:label "Citrus Fruit"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Clean
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Clean
 :Clean rdf:type owl:Class ;
        rdfs:subClassOf :Preparatory ;
        rdf:type owl:Class ;
@@ -1391,7 +1391,7 @@ Wipe:"""@en ;
        rdfs:label "Clean"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Coat
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Coat
 :Coat rdf:type owl:Class ;
       rdfs:subClassOf :Preparatory ;
       rdf:type owl:Class ;
@@ -1403,21 +1403,21 @@ Deglaze"""^^xsd:string ;
       rdfs:label "Coat"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/ColdCuts
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#ColdCuts
 :ColdCuts rdf:type owl:Class ;
           rdfs:subClassOf :CurvedMeats ;
           rdf:type owl:Class ;
           rdfs:label "Cold Cuts"@en .
 
 
-###  https://purl.org/net/recipeon/CommonTropicalFruit
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CommonTropicalFruit
 :CommonTropicalFruit rdf:type owl:Class ;
                      rdfs:subClassOf :Fruits ;
                      rdf:type owl:Class ;
                      rdfs:label "CommonTropicalFruit"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Cookie
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cookie
 :Cookie rdf:type owl:Class ;
         rdfs:subClassOf :BakedGoods ;
         rdf:about "A cookie (American English), or a biscuit (British English), is a baked or cooked snack or dessert that is typically small, flat and sweet. It usually contains flour, sugar, egg, and some type of oil, fat, or butter. It may include other ingredients such as raisins, oats, chocolate chips, nuts, etc."@en ,
@@ -1426,7 +1426,7 @@ Deglaze"""^^xsd:string ;
         rdfs:label "Cookie"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Cooking
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cooking
 :Cooking rdf:type owl:Class ;
          rdfs:subClassOf owl:Action ;
          owl:disjointWith [ rdf:type owl:Class ;
@@ -1440,14 +1440,14 @@ Deglaze"""^^xsd:string ;
          rdfs:label "Cooking"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/CookingGreens
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CookingGreens
 :CookingGreens rdf:type owl:Class ;
                rdfs:subClassOf :Vegetable ;
                rdf:type owl:Class ;
                rdfs:label "Cooking Greens"@en .
 
 
-###  https://purl.org/net/recipeon/Cool
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cool
 :Cool rdf:type owl:Class ;
       rdfs:subClassOf :PostCooking ;
       rdf:type owl:Class ;
@@ -1460,7 +1460,7 @@ Frost"""@en ;
       rdfs:label "Cool"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Corn
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Corn
 :Corn rdf:type owl:Class ;
       rdfs:subClassOf :Grains ;
       rdf:about "https://en.wikipedia.org/wiki/Maize"@en ;
@@ -1469,7 +1469,7 @@ Frost"""@en ;
       rdfs:label "Corn"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Cracker
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cracker
 :Cracker rdf:type owl:Class ;
          rdfs:subClassOf :BakedGoods ;
          rdf:about "https://en.wikipedia.org/wiki/Cracker_(food)"@en ;
@@ -1478,21 +1478,21 @@ Frost"""@en ;
          rdfs:label "Cracker"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Crumb
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Crumb
 :Crumb rdf:type owl:Class ;
        rdfs:subClassOf :BakedGoods ;
        rdf:type owl:Class ;
        rdfs:label "Crumb"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Cucumber
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cucumber
 :Cucumber rdf:type owl:Class ;
           rdfs:subClassOf :FruitVegetables ;
           rdf:type owl:Class ;
           rdfs:label "Cucumbers"@en .
 
 
-###  https://purl.org/net/recipeon/CulturedMilkProducts
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CulturedMilkProducts
 :CulturedMilkProducts rdf:type owl:Class ;
                       rdfs:subClassOf :Dairy ;
                       rdf:about "https://en.wikipedia.org/wiki/Fermented_milk_products"@en ;
@@ -1501,14 +1501,14 @@ Frost"""@en ;
                       rdfs:label "Cultured Milk Products"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/CurvedMeats
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CurvedMeats
 :CurvedMeats rdf:type owl:Class ;
              rdfs:subClassOf :Meats ;
              rdf:type owl:Class ;
              rdfs:label "Curved Meats"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Cut
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cut
 :Cut rdf:type owl:Class ;
      rdfs:subClassOf :Preparatory ;
      rdf:type owl:Class ;
@@ -1528,21 +1528,21 @@ Quarter"""@en ;
      rdfs:label "Cut"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Dairy
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Dairy
 :Dairy rdf:type owl:Class ;
        rdfs:subClassOf :Ingredient ;
        rdf:type owl:Class ;
        rdfs:label "Dairy"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/DairyMilkCream
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DairyMilkCream
 :DairyMilkCream rdf:type owl:Class ;
                 rdfs:subClassOf :MilkCream ;
                 rdf:type owl:Class ;
                 rdfs:label "Dairy Milk Cream"@en .
 
 
-###  https://purl.org/net/recipeon/Dip
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Dip
 :Dip rdf:type owl:Class ;
      rdfs:subClassOf :Preparatory ;
      rdf:type owl:Class ;
@@ -1555,7 +1555,7 @@ Immerse:"""@en ;
      rdfs:label "Dip"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/DirectHeat
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DirectHeat
 :DirectHeat rdf:type owl:Class ;
             rdfs:subClassOf :Cooking ;
             rdf:type owl:Class ;
@@ -1571,21 +1571,21 @@ Grill"""@en ;
             rdfs:label "DirectHeat"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/DriedBeans
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DriedBeans
 :DriedBeans rdf:type owl:Class ;
             rdfs:subClassOf :Legumes ;
             rdf:type owl:Class ;
             rdfs:label "DriedBeans"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/DriedChile
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DriedChile
 :DriedChile rdf:type owl:Class ;
             rdfs:subClassOf :FruitVegetables ;
             rdf:type owl:Class ;
             rdfs:label "Dried Chile"@en .
 
 
-###  https://purl.org/net/recipeon/DriedFruit
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DriedFruit
 :DriedFruit rdf:type owl:Class ;
             rdfs:subClassOf :Fruits ;
             rdf:about "https://en.wikipedia.org/wiki/Dried_fruit"@en ;
@@ -1594,21 +1594,21 @@ Grill"""@en ;
             rdfs:label "Dried Fruit"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/DriedMeats
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DriedMeats
 :DriedMeats rdf:type owl:Class ;
             rdfs:subClassOf :Meats ;
             rdf:type owl:Class ;
             rdfs:label "DriedMeats"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/DriedPeas
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DriedPeas
 :DriedPeas rdf:type owl:Class ;
            rdfs:subClassOf :Legumes ;
            rdf:type owl:Class ;
            rdfs:label "DriedPeas"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/EdiblePods
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#EdiblePods
 :EdiblePods rdf:type owl:Class ;
             rdfs:subClassOf :Legumes ,
                             :Vegetable ;
@@ -1618,28 +1618,28 @@ Grill"""@en ;
             rdfs:label "EdiblePods"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/EggPlants
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#EggPlants
 :EggPlants rdf:type owl:Class ;
            rdfs:subClassOf :FruitVegetables ;
            rdf:type owl:Class ;
            rdfs:label "Egg Plants"@en .
 
 
-###  https://purl.org/net/recipeon/ExoticTropicalFruit
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#ExoticTropicalFruit
 :ExoticTropicalFruit rdf:type owl:Class ;
                      rdfs:subClassOf :Fruits ;
                      rdf:type owl:Class ;
                      rdfs:label "Exotic Tropical Fruit"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/ExtractsEssences
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#ExtractsEssences
 :ExtractsEssences rdf:type owl:Class ;
                   rdfs:subClassOf :Flavorings ;
                   rdf:type owl:Class ;
                   rdfs:label "Extracts Essences"@en .
 
 
-###  https://purl.org/net/recipeon/Fats
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Fats
 :Fats rdf:type owl:Class ;
       rdfs:subClassOf :FatsOils ;
       rdf:type owl:Class ;
@@ -1647,28 +1647,28 @@ Grill"""@en ;
       rdfs:label "Fats"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/FatsOils
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FatsOils
 :FatsOils rdf:type owl:Class ;
           rdfs:subClassOf :Ingredient ;
           rdf:type owl:Class ;
           rdfs:label "Fats Oils"@en .
 
 
-###  https://purl.org/net/recipeon/FattyFirmTextured
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FattyFirmTextured
 :FattyFirmTextured rdf:type owl:Class ;
                    rdfs:subClassOf :Fish ;
                    rdf:type owl:Class ;
                    rdfs:label "Fatty Firm Textured"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/FattyFlakyTextured
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FattyFlakyTextured
 :FattyFlakyTextured rdf:type owl:Class ;
                     rdfs:subClassOf :Fish ;
                     rdf:type owl:Class ;
                     rdfs:label "FattyFlakyTextured"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Finish
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Finish
 :Finish rdf:type owl:Class ;
         rdfs:subClassOf :PostCooking ;
         rdf:type owl:Class ;
@@ -1684,28 +1684,28 @@ Layer:"""@en ;
         rdfs:label "Finish"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/FirmCheese
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FirmCheese
 :FirmCheese rdf:type owl:Class ;
             rdfs:subClassOf :Cheese ;
             rdf:type owl:Class ;
             rdfs:label "Firm Cheese"@en .
 
 
-###  https://purl.org/net/recipeon/Fish
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Fish
 :Fish rdf:type owl:Class ;
       rdfs:subClassOf :Ingredient ;
       rdf:type owl:Class ;
       rdfs:label "Fish"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/FlatBread
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FlatBread
 :FlatBread rdf:type owl:Class ;
            rdfs:subClassOf :BakedGoods ;
            rdf:type owl:Class ;
            rdfs:label "FlatBread"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/FlavorIngredient
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FlavorIngredient
 :FlavorIngredient rdf:type owl:Class ;
                   rdfs:subClassOf :IngredientType ;
                   owl:disjointWith [ rdf:type owl:Class ;
@@ -1718,21 +1718,21 @@ Layer:"""@en ;
                              "If an ingredient role is of flavoring in a recipe then it come unders the flavor ingredient."@en .
 
 
-###  https://purl.org/net/recipeon/Flavorings
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Flavorings
 :Flavorings rdf:type owl:Class ;
             rdfs:subClassOf :Ingredient ;
             rdf:type owl:Class ;
             rdfs:label "Flavorings"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/FoodWrapper
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FoodWrapper
 :FoodWrapper rdf:type owl:Class ;
              rdfs:subClassOf :GrainProducts ;
              rdf:type owl:Class ;
              rdfs:label "FoodWrapper"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/FreshBeans
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FreshBeans
 :FreshBeans rdf:type owl:Class ;
             rdfs:subClassOf :Legumes ,
                             :Vegetable ;
@@ -1741,21 +1741,21 @@ Layer:"""@en ;
             rdfs:label "FreshBeans"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/FreshCheese
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FreshCheese
 :FreshCheese rdf:type owl:Class ;
              rdfs:subClassOf :Cheese ;
              rdf:type owl:Class ;
              rdfs:label "Fresh Cheese"@en .
 
 
-###  https://purl.org/net/recipeon/FreshChile
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FreshChile
 :FreshChile rdf:type owl:Class ;
             rdfs:subClassOf :FruitVegetables ;
             rdf:type owl:Class ;
             rdfs:label "Fresh Chile"@en .
 
 
-###  https://purl.org/net/recipeon/FreshPeas
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FreshPeas
 :FreshPeas rdf:type owl:Class ;
            rdfs:subClassOf :Legumes ,
                            :Vegetable ;
@@ -1763,7 +1763,7 @@ Layer:"""@en ;
            rdfs:label "FreshPeas"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/FruitButters
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FruitButters
 :FruitButters rdf:type owl:Class ;
               rdfs:subClassOf :Fruits ;
               rdf:about "https://en.wikipedia.org/wiki/Fruit_butter"@en ;
@@ -1772,7 +1772,7 @@ Layer:"""@en ;
               rdfs:label "Fruit Butters"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/FruitJuices
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FruitJuices
 :FruitJuices rdf:type owl:Class ;
              rdfs:subClassOf :Fruits ;
              rdf:about "https://en.wikipedia.org/wiki/Juice"@en ;
@@ -1781,7 +1781,7 @@ Layer:"""@en ;
              rdfs:label "Fruit Jucies"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/FruitVegetables
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FruitVegetables
 :FruitVegetables rdf:type owl:Class ;
                  rdfs:subClassOf :Fruits ,
                                  :Vegetable ;
@@ -1789,7 +1789,7 @@ Layer:"""@en ;
                  rdfs:label "Fruit Vegetables"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Fruits
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Fruits
 :Fruits rdf:type owl:Class ;
         rdfs:subClassOf :Ingredient ;
         rdf:type owl:Class ,
@@ -1797,7 +1797,7 @@ Layer:"""@en ;
         rdfs:label "Fruit"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Fry
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Fry
 :Fry rdf:type owl:Class ;
      rdfs:subClassOf :Cooking ;
      rdf:about "https://en.wikipedia.org/wiki/Frying"@en ;
@@ -1814,14 +1814,14 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
      rdfs:label "Fry"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/GameMeat
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#GameMeat
 :GameMeat rdf:type owl:Class ;
           rdfs:subClassOf :Meats ;
           rdf:type owl:Class ;
           rdfs:label "GameMeat"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Gelatin
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Gelatin
 :Gelatin rdf:type owl:Class ;
          rdfs:subClassOf :Thickener ;
          owl:disjointWith :StarchThickener ;
@@ -1829,28 +1829,28 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
          rdfs:label "Gleatin"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/GrainProducts
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#GrainProducts
 :GrainProducts rdf:type owl:Class ;
                rdfs:subClassOf :Ingredient ;
                rdf:type owl:Class ;
                rdfs:label "GrainProducts"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Grains
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Grains
 :Grains rdf:type owl:Class ;
         rdfs:subClassOf :Ingredient ;
         rdf:type owl:Class ;
         rdfs:label "Grains"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Ham
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Ham
 :Ham rdf:type owl:Class ;
      rdfs:subClassOf :CurvedMeats ;
      rdf:type owl:Class ;
      rdfs:label "Ham"@en .
 
 
-###  https://purl.org/net/recipeon/HerbSpiceMix
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#HerbSpiceMix
 :HerbSpiceMix rdf:type owl:Class ;
               rdfs:subClassOf :Flavorings ;
               rdf:about "https://en.wikipedia.org/wiki/Herb"@en ;
@@ -1859,7 +1859,7 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
               rdfs:label "Herb Spice Mix"@en .
 
 
-###  https://purl.org/net/recipeon/Herbs
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Herbs
 :Herbs rdf:type owl:Class ;
        rdfs:subClassOf :Flavorings ;
        rdf:about "https://en.wikipedia.org/wiki/Herb"@en ;
@@ -1868,14 +1868,14 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
        rdfs:label "Herbs"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/InflorescentVegetables
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#InflorescentVegetables
 :InflorescentVegetables rdf:type owl:Class ;
                         rdfs:subClassOf :Vegetable ;
                         rdf:type owl:Class ;
                         rdfs:label "InflorescentVegetables"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Ingredient
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Ingredient
 :Ingredient rdf:type owl:Class ;
             rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty :hasAction ;
@@ -1896,13 +1896,13 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
             rdfs:label "Ingredient"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/IngredientType
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#IngredientType
 :IngredientType rdf:type owl:Class ;
                 rdf:type owl:Class ;
                 rdfs:label "IngredientType"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Juices
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Juices
 :Juices rdf:type owl:Class ;
         rdfs:subClassOf :Flavorings ,
                         :Liquids ;
@@ -1912,7 +1912,7 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
         rdfs:label "Juices"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Kamut
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Kamut
 :Kamut rdf:type owl:Class ;
        rdfs:subClassOf :Grains ;
        rdf:about "https://en.wikipedia.org/wiki/Khorasan_wheat"@en ;
@@ -1921,7 +1921,7 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
        rdfs:label "Kamut"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Lamb
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Lamb
 :Lamb rdf:type owl:Class ;
       rdfs:subClassOf :Meats ;
       rdf:about "https://en.wikipedia.org/wiki/Lamb_and_mutton"@en ;
@@ -1930,28 +1930,28 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
       rdfs:label "Lamb"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/LeanFirmTextured
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#LeanFirmTextured
 :LeanFirmTextured rdf:type owl:Class ;
                   rdfs:subClassOf :Fish ;
                   rdf:type owl:Class ;
                   rdfs:label "LearnFirmTextured"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/LeanFlakyTextured
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#LeanFlakyTextured
 :LeanFlakyTextured rdf:type owl:Class ;
                    rdfs:subClassOf :Fish ;
                    rdf:type owl:Class ;
                    rdfs:label "LeanFlakyTextured"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Legumes
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Legumes
 :Legumes rdf:type owl:Class ;
          rdfs:subClassOf :Ingredient ;
          rdf:type owl:Class ;
          rdfs:label "Legumes"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Lentils
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Lentils
 :Lentils rdf:type owl:Class ;
          rdfs:subClassOf :Ingredient ;
          rdf:about "https://en.wikipedia.org/wiki/Lentil"@en ;
@@ -1960,14 +1960,14 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
          rdfs:label "Lentils"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/LiquidSweetner
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#LiquidSweetner
 :LiquidSweetner rdf:type owl:Class ;
                 rdfs:subClassOf :Liquids ;
                 rdf:type owl:Class ;
                 rdfs:label "LiquidSweetner"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/LiquidSweetners
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#LiquidSweetners
 :LiquidSweetners rdf:type owl:Class ;
                  rdfs:subClassOf :Flavorings ;
                  rdf:about "https://en.wikipedia.org/wiki/Syrup"@en ;
@@ -1983,21 +1983,21 @@ High fructose corn syrup"""@en ;
                  rdfs:label "Liquid Sweetners"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Liquids
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Liquids
 :Liquids rdf:type owl:Class ;
          rdfs:subClassOf :Ingredient ;
          rdf:type owl:Class ;
          rdfs:label "Liquids"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Liquors
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Liquors
 :Liquors rdf:type owl:Class ;
          rdfs:subClassOf :Flavorings ;
          rdf:type owl:Class ;
          rdfs:label "Liquors"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Lubricate
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Lubricate
 :Lubricate rdf:type owl:Class ;
            rdfs:subClassOf :Preparatory ;
            rdf:type owl:Class ;
@@ -2009,7 +2009,7 @@ Smear:"""@en ;
            rdfs:label "Lubricate"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/MainIngredient
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#MainIngredient
 :MainIngredient rdf:type owl:Class ;
                 rdfs:subClassOf :IngredientType ;
                 owl:disjointWith [ rdf:type owl:Class ;
@@ -2022,7 +2022,7 @@ Smear:"""@en ;
                            "if any ingredient name is the part of recipe title then this ingredient would be classified as main ingredient."@en .
 
 
-###  https://purl.org/net/recipeon/MeatSpecific
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#MeatSpecific
 :MeatSpecific rdf:type owl:Class ;
               rdfs:subClassOf :Preparatory ;
               rdf:type owl:Class ;
@@ -2031,14 +2031,14 @@ DeBone:"""@en ;
               rdfs:label "MeatSpecific"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Meats
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Meats
 :Meats rdf:type owl:Class ;
        rdfs:subClassOf :Ingredient ;
        rdf:type owl:Class ;
        rdfs:label "Meat"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Melons
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Melons
 :Melons rdf:type owl:Class ;
         rdfs:subClassOf :Fruits ;
         rdf:type owl:Class ;
@@ -2047,7 +2047,7 @@ DeBone:"""@en ;
                    "https://en.wikipedia.org/wiki/Melon"@en .
 
 
-###  https://purl.org/net/recipeon/Melt
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Melt
 :Melt rdf:type owl:Class ;
       rdfs:subClassOf :Preparatory ;
       rdf:type owl:Class ;
@@ -2060,7 +2060,7 @@ Soften:"""@en ;
       rdfs:label "Melt"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Microwave
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Microwave
 :Microwave rdf:type owl:Class ;
            rdfs:subClassOf :Cooking ;
            rdf:about "https://en.wikipedia.org/wiki/Microwave_oven"@en ;
@@ -2072,7 +2072,7 @@ Preheat"""@en ;
            rdfs:label "Microwave"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/MilkCream
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#MilkCream
 :MilkCream rdf:type owl:Class ;
            rdfs:subClassOf :Dairy ;
            rdf:about "https://en.wikipedia.org/wiki/Cream"@en ;
@@ -2081,7 +2081,7 @@ Preheat"""@en ;
            rdfs:label "Milk Cream"@en .
 
 
-###  https://purl.org/net/recipeon/Mix
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Mix
 :Mix rdf:type owl:Class ;
      rdfs:subClassOf :Preparatory ,
                      [ rdf:type owl:Restriction ;
@@ -2103,7 +2103,7 @@ Shake"""@en ;
      rdfs:label "Mix"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Mushrooms
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Mushrooms
 :Mushrooms rdf:type owl:Class ;
            rdfs:subClassOf :Vegetable ;
            rdf:about "https://en.wikipedia.org/wiki/Mushroom"@en ;
@@ -2112,21 +2112,21 @@ Shake"""@en ;
            rdfs:label "Mushrooms"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/NonDairyMilkCream
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#NonDairyMilkCream
 :NonDairyMilkCream rdf:type owl:Class ;
                    rdfs:subClassOf :Liquids ;
                    rdf:type owl:Class ;
                    rdfs:label "Non Dairy Milk Cream"@en .
 
 
-###  https://purl.org/net/recipeon/NonWheatFlour
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#NonWheatFlour
 :NonWheatFlour rdf:type owl:Class ;
                rdfs:subClassOf :GrainProducts ;
                rdf:type owl:Class ;
                rdfs:label "NoonWheatFlour"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Nutrient
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Nutrient
 :Nutrient rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :hasNutrientQuantity ;
@@ -2139,14 +2139,14 @@ Shake"""@en ;
           rdfs:label "Nutrient"@en .
 
 
-###  https://purl.org/net/recipeon/Nuts
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Nuts
 :Nuts rdf:type owl:Class ;
       rdfs:subClassOf :Flavorings ;
       rdf:type owl:Class ;
       rdfs:label "Nuts"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Oat
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Oat
 :Oat rdf:type owl:Class ;
      rdfs:subClassOf :Grains ;
      rdf:about "https://en.wikipedia.org/wiki/Oat"@en ;
@@ -2155,7 +2155,7 @@ Shake"""@en ;
      rdfs:label "Oat"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/OilCookingSprays
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#OilCookingSprays
 :OilCookingSprays rdf:type owl:Class ;
                   rdfs:subClassOf :FatsOils ;
                   rdf:about "https://en.wikipedia.org/wiki/Cooking_spray"@en ;
@@ -2164,14 +2164,14 @@ Shake"""@en ;
                   rdfs:label "Oil Cooking Sprays"@en .
 
 
-###  https://purl.org/net/recipeon/Olive
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Olive
 :Olive rdf:type owl:Class ;
        rdfs:subClassOf :FruitVegetables ;
        rdf:type owl:Class ;
        rdfs:label "Olive"@en .
 
 
-###  https://purl.org/net/recipeon/Pasta
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Pasta
 :Pasta rdf:type owl:Class ;
        rdfs:subClassOf :GrainProducts ;
        rdf:about "https://en.wikipedia.org/wiki/Pasta"@en ;
@@ -2180,14 +2180,14 @@ Shake"""@en ;
        rdfs:label "Pasta"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Pear
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Pear
 :Pear rdf:type owl:Class ;
       rdfs:subClassOf :PomeFruit ;
       rdf:type owl:Class ;
       rdfs:label "Peer"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Peel
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Peel
 :Peel rdf:type owl:Class ;
       rdfs:subClassOf :Preparatory ;
       rdf:type owl:Class ;
@@ -2213,7 +2213,7 @@ Shuck:"""@en ;
       rdfs:label "Peel"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Placement
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Placement
 :Placement rdf:type owl:Class ;
            rdfs:subClassOf :Preparatory ;
            rdf:type owl:Class ;
@@ -2228,7 +2228,7 @@ Alternate:"""@en ;
            rdfs:label "Placement"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/PomeFruit
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#PomeFruit
 :PomeFruit rdf:type owl:Class ;
            rdfs:subClassOf :Fruits ;
            rdf:about "https://en.wikipedia.org/wiki/Pome"@en ;
@@ -2237,14 +2237,14 @@ Alternate:"""@en ;
            rdfs:label "Pome Fruit"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Pork
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Pork
 :Pork rdf:type owl:Class ;
       rdfs:subClassOf :Meats ;
       rdf:type owl:Class ;
       rdfs:label "Pork"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/PostCooking
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#PostCooking
 :PostCooking rdf:type owl:Class ;
              rdfs:subClassOf owl:Action ;
              owl:disjointWith [ rdf:type owl:Class ;
@@ -2257,7 +2257,7 @@ Alternate:"""@en ;
              rdfs:label "PostCooking"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Poultry
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Poultry
 :Poultry rdf:type owl:Class ;
          rdfs:subClassOf :Meats ;
          rdf:about "https://en.wikipedia.org/wiki/Poultry"@en ;
@@ -2266,7 +2266,7 @@ Alternate:"""@en ;
          rdfs:label "Poultry"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Preparatory
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Preparatory
 :Preparatory rdf:type owl:Class ;
              rdfs:subClassOf owl:Action ;
              owl:disjointWith [ rdf:type owl:Class ;
@@ -2279,7 +2279,7 @@ Alternate:"""@en ;
              rdfs:label "Preparatory"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Preserves
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Preserves
 :Preserves rdf:type owl:Class ;
            rdfs:subClassOf :Flavorings ,
                            :Fruits ;
@@ -2287,7 +2287,7 @@ Alternate:"""@en ;
            rdfs:label "Preservers"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Procedure
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Procedure
 :Procedure rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :hasProcedureAction ;
@@ -2303,14 +2303,14 @@ Alternate:"""@en ;
            rdfs:label "Procedure"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/ProcessedChesse
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#ProcessedChesse
 :ProcessedChesse rdf:type owl:Class ;
                  rdfs:subClassOf :Cheese ;
                  rdf:type owl:Class ;
                  rdfs:label "Processed Chesse"@en .
 
 
-###  https://purl.org/net/recipeon/Refine
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Refine
 :Refine rdf:type owl:Class ;
         rdfs:subClassOf :Preparatory ;
         rdf:type owl:Class ;
@@ -2322,7 +2322,7 @@ Skim"""^^xsd:string ;
         rdfs:label "Refine"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Remove
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Remove
 :Remove rdf:type owl:Class ;
         rdfs:subClassOf :Preparatory ;
         rdf:type owl:Class ;
@@ -2334,7 +2334,7 @@ Discard"""@en ;
         rdfs:label "Remove"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Rice
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Rice
 :Rice rdf:type owl:Class ;
       rdfs:subClassOf :Grains ;
       rdf:about "https://en.wikipedia.org/wiki/Rice"@en ;
@@ -2343,7 +2343,7 @@ Discard"""@en ;
       rdfs:label "Rice"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Roots
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Roots
 :Roots rdf:type owl:Class ;
        rdfs:subClassOf :Vegetable ;
        rdf:about "https://en.wikipedia.org/wiki/Root_vegetable"@en ;
@@ -2352,7 +2352,7 @@ Discard"""@en ;
        rdfs:label "Roots"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Rye
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Rye
 :Rye rdf:type owl:Class ;
      rdfs:subClassOf :Grains ;
      rdf:about "https://en.wikipedia.org/wiki/Rye"@en ;
@@ -2361,7 +2361,7 @@ Discard"""@en ;
      rdfs:label "Rye"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/SaladGreens
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SaladGreens
 :SaladGreens rdf:type owl:Class ;
              rdfs:subClassOf :Vegetable ;
              rdf:about "https://en.wikipedia.org/wiki/Salad"@en ;
@@ -2370,14 +2370,14 @@ Discard"""@en ;
              rdfs:label "Salad Greens"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Sausages
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Sausages
 :Sausages rdf:type owl:Class ;
           rdfs:subClassOf :CurvedMeats ;
           rdf:type owl:Class ;
           rdfs:label "Sausages"@en .
 
 
-###  https://purl.org/net/recipeon/Scramble
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Scramble
 :Scramble rdf:type owl:Class ;
           rdfs:subClassOf :Cooking ;
           rdf:type owl:Class ;
@@ -2385,7 +2385,7 @@ Discard"""@en ;
           rdfs:label "Scramble"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/SeaVegetables
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SeaVegetables
 :SeaVegetables rdf:type owl:Class ;
                rdfs:subClassOf :Vegetable ;
                rdf:about "https://en.wikipedia.org/wiki/Edible_seaweed"@en ;
@@ -2394,7 +2394,7 @@ Discard"""@en ;
                rdfs:label "Sea Vegetables"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Season
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Season
 :Season rdf:type owl:Class ;
         rdfs:subClassOf :Preparatory ;
         rdf:type owl:Class ;
@@ -2407,35 +2407,35 @@ Re-season"""@en ;
         rdfs:label "Season"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Seeds
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Seeds
 :Seeds rdf:type owl:Class ;
        rdfs:subClassOf :Flavorings ;
        rdf:type owl:Class ;
        rdfs:label "Seeds"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/SemiFirmCheese
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SemiFirmCheese
 :SemiFirmCheese rdf:type owl:Class ;
                 rdfs:subClassOf :Cheese ;
                 rdf:type owl:Class ;
                 rdfs:label "Semi Firm Cheese"@en .
 
 
-###  https://purl.org/net/recipeon/SemiSoftCheese
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SemiSoftCheese
 :SemiSoftCheese rdf:type owl:Class ;
                 rdfs:subClassOf :Cheese ;
                 rdf:type owl:Class ;
                 rdfs:label "Semi Soft Cheese"@en .
 
 
-###  https://purl.org/net/recipeon/ShellFish
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#ShellFish
 :ShellFish rdf:type owl:Class ;
            rdfs:subClassOf :Fish ;
            rdf:type owl:Class ;
            rdfs:label "ShellFish"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/SideIngredient
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SideIngredient
 :SideIngredient rdf:type owl:Class ;
                 rdfs:subClassOf :IngredientType ;
                 owl:disjointWith [ rdf:type owl:Class ;
@@ -2448,7 +2448,7 @@ Re-season"""@en ;
                            "The ingredients other than main and flavoring ingredient are considered as side ingredients."@en .
 
 
-###  https://purl.org/net/recipeon/SnapBeans
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SnapBeans
 :SnapBeans rdf:type owl:Class ;
            rdfs:subClassOf :Legumes ,
                            :Vegetable ;
@@ -2456,7 +2456,7 @@ Re-season"""@en ;
            rdfs:label "Snap Beans"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Soak
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Soak
 :Soak rdf:type owl:Class ;
       rdfs:subClassOf :Preparatory ;
       rdf:type owl:Class ;
@@ -2467,21 +2467,21 @@ Immerse"""^^xsd:string ;
       rdfs:label "Soak"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/SoftCheese
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SoftCheese
 :SoftCheese rdf:type owl:Class ;
             rdfs:subClassOf :Cheese ;
             rdf:type owl:Class ;
             rdfs:label "Soft Cheese"@en .
 
 
-###  https://purl.org/net/recipeon/SoyProducts
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SoyProducts
 :SoyProducts rdf:type owl:Class ;
              rdfs:subClassOf :Legumes ;
              rdf:type owl:Class ;
              rdfs:label "SoyProducts"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Spelt
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Spelt
 :Spelt rdf:type owl:Class ;
        rdfs:subClassOf :Grains ;
        rdf:about "https://en.wikipedia.org/wiki/Spelt"@en ;
@@ -2490,7 +2490,7 @@ Immerse"""^^xsd:string ;
        rdfs:label "Spelt"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Spices
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Spices
 :Spices rdf:type owl:Class ;
         rdfs:subClassOf :Flavorings ;
         rdf:about "https://en.wikipedia.org/wiki/Spice"@en ;
@@ -2499,7 +2499,7 @@ Immerse"""^^xsd:string ;
         rdfs:label "Spices"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Sprouts
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Sprouts
 :Sprouts rdf:type owl:Class ;
          rdfs:subClassOf :Vegetable ;
          rdf:about "https://en.wikipedia.org/wiki/Brussels_sprout"@en ;
@@ -2508,7 +2508,7 @@ Immerse"""^^xsd:string ;
          rdfs:label "Sprouts"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/StalkVegetables
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#StalkVegetables
 :StalkVegetables rdf:type owl:Class ;
                  rdfs:subClassOf :Vegetable ;
                  rdf:about "https://en.wikipedia.org/wiki/Celery"@en ;
@@ -2517,14 +2517,14 @@ Immerse"""^^xsd:string ;
                  rdfs:label "Stalk Vegetables"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/StarchThickener
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#StarchThickener
 :StarchThickener rdf:type owl:Class ;
                  rdfs:subClassOf :Thickener ;
                  rdf:type owl:Class ;
                  rdfs:label "StarchThickener"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Stems
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Stems
 :Stems rdf:type owl:Class ;
        rdfs:subClassOf :Vegetable ;
        rdf:type owl:Class ;
@@ -2532,14 +2532,14 @@ Immerse"""^^xsd:string ;
        rdfs:label "Stems"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Stocks
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Stocks
 :Stocks rdf:type owl:Class ;
         rdfs:subClassOf :Liquids ;
         rdf:type owl:Class ;
         rdfs:label "Stocks"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/StoneFruit
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#StoneFruit
 :StoneFruit rdf:type owl:Class ;
             rdfs:subClassOf :Fruits ;
             rdf:about "https://en.wikipedia.org/wiki/Drupe"@en ;
@@ -2548,7 +2548,7 @@ Immerse"""^^xsd:string ;
             rdfs:label "StoneFruit"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Storage
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Storage
 :Storage rdf:type owl:Class ;
          rdfs:subClassOf :PostCooking ;
          rdf:type owl:Class ;
@@ -2559,35 +2559,35 @@ Save"""@en ;
          rdfs:label "Storage"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/SummerSquash
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SummerSquash
 :SummerSquash rdf:type owl:Class ;
               rdfs:subClassOf :FruitVegetables ;
               rdf:type owl:Class ;
               rdfs:label "Summer Squash"@en .
 
 
-###  https://purl.org/net/recipeon/SweetPepper
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SweetPepper
 :SweetPepper rdf:type owl:Class ;
              rdfs:subClassOf :FruitVegetables ;
              rdf:type owl:Class ;
              rdfs:label "Sweet Pepper"@en .
 
 
-###  https://purl.org/net/recipeon/Thickener
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Thickener
 :Thickener rdf:type owl:Class ;
            rdfs:subClassOf :GrainProducts ;
            rdf:type owl:Class ;
            rdfs:label "Thicker"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Tomatoes
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Tomatoes
 :Tomatoes rdf:type owl:Class ;
           rdfs:subClassOf :FruitVegetables ;
           rdf:type owl:Class ;
           rdfs:label "Tomatoes"@en .
 
 
-###  https://purl.org/net/recipeon/Triticale
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Triticale
 :Triticale rdf:type owl:Class ;
            rdfs:subClassOf :Grains ;
            rdf:about "https://en.wikipedia.org/wiki/Triticale"@en ;
@@ -2596,7 +2596,7 @@ Save"""@en ;
            rdfs:label "Triticale"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Tubers
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Tubers
 :Tubers rdf:type owl:Class ;
         rdfs:subClassOf :Vegetable ;
         rdf:about "https://en.wikipedia.org/wiki/Tuber"@en ;
@@ -2605,28 +2605,28 @@ Save"""@en ;
         rdfs:label "Tubers"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/VarietyMeats
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#VarietyMeats
 :VarietyMeats rdf:type owl:Class ;
               rdfs:subClassOf :Meats ;
               rdf:type owl:Class ;
               rdfs:label "VarietyMeats"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Veal
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Veal
 :Veal rdf:type owl:Class ;
       rdfs:subClassOf :Meats ;
       rdf:type owl:Class ;
       rdfs:label "Veal"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Vegetable
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Vegetable
 :Vegetable rdf:type owl:Class ;
            rdfs:subClassOf :Ingredient ;
            rdf:type owl:Class ;
            rdfs:label "Vegetable"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Vinegar
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Vinegar
 :Vinegar rdf:type owl:Class ;
          rdfs:subClassOf :Flavorings ,
                          :Liquids ;
@@ -2636,14 +2636,14 @@ Save"""@en ;
          rdfs:label "Vinegar"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/WaterSoda
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#WaterSoda
 :WaterSoda rdf:type owl:Class ;
            rdfs:subClassOf :Liquids ;
            rdf:type owl:Class ;
            rdfs:label "Water Soda"@en .
 
 
-###  https://purl.org/net/recipeon/Wheat
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Wheat
 :Wheat rdf:type owl:Class ;
        rdfs:subClassOf :Grains ;
        rdf:about "https://en.wikipedia.org/wiki/Wheat"@en ;
@@ -2652,7 +2652,7 @@ Save"""@en ;
        rdfs:label "Wheat"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/WheatFlour
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#WheatFlour
 :WheatFlour rdf:type owl:Class ;
             rdfs:subClassOf :GrainProducts ;
             rdf:about "https://en.wikipedia.org/wiki/Wheat_flour"@en ;
@@ -2661,14 +2661,14 @@ Save"""@en ;
             rdfs:label "WheatFlour"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/Wines
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Wines
 :Wines rdf:type owl:Class ;
        rdfs:subClassOf :Flavorings ;
        rdf:type owl:Class ;
        rdfs:label "Wines"^^xsd:string .
 
 
-###  https://purl.org/net/recipeon/WinterSquash
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#WinterSquash
 :WinterSquash rdf:type owl:Class ;
               rdfs:subClassOf :FruitVegetables ;
               rdf:type owl:Class ;
@@ -2679,208 +2679,208 @@ Save"""@en ;
 #    Individuals
 #################################################################
 
-###  https://purl.org/net/recipeon/nounit
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#nounit
 :nounit a qudt:Unit .
 
 
-###  https://purl.org/net/recipeon/1
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1
 :1 a qudt:QuantityValue ;
                                   qudt:hasNumericValue "1.0"^^xsd:double .
 
 
-###  https://purl.org/net/recipeon/1By2
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1By2
 :1By2 a qudt:QuantityValue ;
                                      qudt:hasNumericValue "0.5"^^xsd:double  .
 
-###  https://purl.org/net/recipeon/1By2Teaspoon
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1By2Teaspoon
 :1By2Teaspoon qudt:hasQuantityValue :1By2 ;
                                              qudt:hasUnit :Teaspoon ;
                                              a qudt:Quantity .
 
 
-###  https://purl.org/net/recipeon/1By4
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1By4
 :1By4 qudt:hasNumericValue "0.25"^^xsd:double ;
                                      a qudt:QuantityValue  .
 
 
-###  https://purl.org/net/recipeon/1By4Cup
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1By4Cup
 :1By4Cup qudt:hasQuantityValue :1By4 ;
                                         qudt:hasUnit :Cup ;
                                         a qudt:Quantity  .
 
 
-###  https://purl.org/net/recipeon/1Can
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1Can
 :1Can qudt:hasQuantityValue :1 ;
                                      qudt:hasUnit :Can ;
                                      a qudt:Quantity .
 
 
-###  https://purl.org/net/recipeon/1Lb
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1Lb
 :1Lb qudt:hasQuantityValue :1 ;
                                     qudt:hasUnit :Lb ;
                                     a qudt:Quantity  .
 
 
-###  https://purl.org/net/recipeon/1Package
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1Package
 :1Package qudt:hasQuantityValue :1 ;
                                          qudt:hasUnit :Package ;
                                          a qudt:Quantity .
 
 
-###  https://purl.org/net/recipeon/1Tablespoon
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1Tablespoon
 :1Tablespoon qudt:hasQuantityValue :1 ;
                                             qudt:hasUnit :Tablespoon ;
                                             a qudt:Quantity .
 
 
-###  https://purl.org/net/recipeon/1-
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1-
 :1- qudt:hasQuantityValue :1 ;
                                    qudt:hasUnit :nounit ;
                                    a qudt:Quantity .
 
 
-###  https://purl.org/net/recipeon/2
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#2
 :2 qudt:hasNumericValue "2.0"^^xsd:double ;
                                   a qudt:QuantityValue  .
 
 
-###  https://purl.org/net/recipeon/2Tablespoon
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#2Tablespoon
 :2Tablespoon qudt:hasQuantityValue :2 ;
                                             qudt:hasUnit :Tablespoon ;
                                             a qudt:Quantity .
 
 
-###  https://purl.org/net/recipeon/2Teaspoon
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#2Teaspoon
 :2Teaspoon qudt:hasQuantityValue :2 ;
                                           qudt:hasUnit :Teaspoon ;
                                           a qudt:Quantity .
 
 
-###  https://purl.org/net/recipeon/AR
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#AR
 :AR <https://schema.org/ratingCount> 5 ;
     <https://schema.org/reviewCount> 5 ;
     a <https://schema.org/AggregateRating> .
 
 
-###  https://purl.org/net/recipeon/Add
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Add
 :Add seq:directlyPrecedes :Cook ;
      a :Preparatory .
 
 
-###  https://purl.org/net/recipeon/Add2
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Add2
 :Add2 seq:directlyPrecedes :Simmer1 ;
       a :Preparatory .
 
 
-###  https://purl.org/net/recipeon/Add3
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Add3
 :Add3 seq:directlyPrecedes :Simmer2 ;
       a :Preparatory .
 
 
-###  https://purl.org/net/recipeon/Bake
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Bake
 :Bake a :Cooking .
 
 
-###  https://purl.org/net/recipeon/Basil
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Basil
 :Basil :hasFlavorIngredient :Flavor ;
        :hasPreparatoryAction :Add ;
        :hasQuantity :1By2Teaspoon ;
        a :Herbs .
 
 
-###  https://purl.org/net/recipeon/BeefBroth
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#BeefBroth
 :BeefBroth :hasPreparatoryAction :Add3 ;
            :hasQuantity :1Can ;
            :hasSideIngredient :Side ;
            a :Stocks .
 
 
-###  https://purl.org/net/recipeon/Can
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Can
 :Can a qudt:Unit  .
 
 
-###  https://purl.org/net/recipeon/Cook
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cook
 :Cook seq:directlyPrecedes :Stir ;
       a :Cooking .
 
 
-###  https://purl.org/net/recipeon/Cup
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cup
 :Cup a qudt:Unit .
 
 
-###  https://purl.org/net/recipeon/Divide
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Divide
 :Divide seq:directlyPrecedes :Bake ;
         a :Preparatory .
 
 
-###  https://purl.org/net/recipeon/Flavor
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Flavor
 :Flavor a  :FlavorIngredient .
 
 
-###  https://purl.org/net/recipeon/FrenchBaguette
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FrenchBaguette
 :FrenchBaguette :hasPreparatoryAction :Split ;
                 :hasQuantity :1- ;
                 :hasSideIngredient :Side ;
                 a :Bread .
 
 
-###  https://purl.org/net/recipeon/Garlic
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Garlic
 :Garlic :hasFlavorIngredient :Flavor ;
         :hasPreparatoryAction :Add ;
         :hasQuantity :1Tablespoon ;
         a :Flavorings .
 
 
-###  https://purl.org/net/recipeon/GarlicAndHerbBoursinCheese
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#GarlicAndHerbBoursinCheese
 :GarlicAndHerbBoursinCheese :hasMainIngredient :MainIngredient ;
                             :hasPreparatoryAction :Spread ;
                             :hasQuantity :1Package ;
                             a :Cheese .
 
 
-###  https://purl.org/net/recipeon/Heat
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Heat
 :Heat seq:directlyPrecedes :Add ;
       a :Cooking .
 
 
-###  https://purl.org/net/recipeon/Heat2
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Heat2
 :Heat2 seq:directlyPrecedes :Split ;
        a :Cooking .
 
 
-###  https://purl.org/net/recipeon/Lb
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Lb
 :Lb a qudt:Unit .
 
 
-###  https://purl.org/net/recipeon/Lorraine
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Lorraine
 :Lorraine <https://schema.org/datePublished> "27-1-2009"^^xsd:string ;
           <https://schema.org/givenName> "Lorraine L"^^xsd:string ;
           a <https://schema.org/Person> .
 
 
-###  https://purl.org/net/recipeon/Main
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Main
 :Main a :MainIngredient .
 
 
-###  https://purl.org/net/recipeon/OliveOil
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#OliveOil
 :OliveOil :hasCookingAction :Heat ;
           :hasQuantity :2Teaspoon ;
           :hasSideIngredient :Side ;
           a :OilCookingSprays .
 
 
-###  https://purl.org/net/recipeon/Onion
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Onion
 :Onion :hasFlavorIngredient :Flavor ;
        :hasPreparatoryAction :Add ;
        :hasQuantity :2Tablespoon ;
        a :Vegetable .
 
 
-###  https://purl.org/net/recipeon/Package
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Package
 :Package a qudt:Unit .
 
 
-###  https://purl.org/net/recipeon/ROAST-BEEF-DIP-SANDWICH-WITH-HERBED-GARLIC-AU-JUS
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#ROAST-BEEF-DIP-SANDWICH-WITH-HERBED-GARLIC-AU-JUS
 :ROAST-BEEF-DIP-SANDWICH-WITH-HERBED-GARLIC-AU-JUS a <https://schema.org/Recipe> ;
 			<https://schema.org/author> :Lorraine ;
                                                    :hasAggregateRating :AR ;
@@ -2907,77 +2907,77 @@ Save"""@en ;
                                                                   :Yougurt ,
                                                                   :Ginger .
 
-###  https://purl.org/net/recipeon/RedWine
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#RedWine
 :RedWine :hasFlavorIngredient :Flavor ;
          :hasPreparatoryAction :Add2 ;
          :hasQuantity :1By4Cup ;
          a :Alcohol .
 
 
-###  https://purl.org/net/recipeon/Refrigerate
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Refrigerate
 :Refrigerate seq:directlyPrecedes :Heat2 ;
              a :PostCooking .
 
 
-###  https://purl.org/net/recipeon/RoastBeef
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#RoastBeef
 :RoastBeef :hasMainIngredient :MainIngredient ;
            :hasPreparatoryAction :Divide ;
            :hasQuantity :1Lb ;
            a :Beef .
 
 
-###  https://purl.org/net/recipeon/Side
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Side
 :Side a :SideIngredient .
 
 
-###  https://purl.org/net/recipeon/Simmer1
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Simmer1
 :Simmer1 seq:directlyPrecedes :Add3 ;
          a :Cooking .
 
 
-###  https://purl.org/net/recipeon/Simmer2
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Simmer2
 :Simmer2 seq:directlyPrecedes :Refrigerate ;
          a :Cooking .
 
 
-###  https://purl.org/net/recipeon/SoySauce
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SoySauce
 :SoySauce :hasFlavorIngredient :Flavor ;
           :hasPreparatoryAction :Add2 ;
           :hasQuantity :2Tablespoon ;
           a :Flavorings .
 
 
-###  https://purl.org/net/recipeon/Split
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Split
 :Split seq:directlyPrecedes :Spread ;
        a :Preparatory .
 
 
-###  https://purl.org/net/recipeon/Spread
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Spread
 :Spread seq:directlyPrecedes :Divide ;
         a :Preparatory .
 
 
-###  https://purl.org/net/recipeon/Stir
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Stir
 :Stir seq:directlyPrecedes :Add2 ;
       a :Preparatory .
 
 
-###  https://purl.org/net/recipeon/Tablespoon
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Tablespoon
 :Tablespoon a qudt:Unit .
 
 
-###  https://purl.org/net/recipeon/Teaspoon
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Teaspoon
 :Teaspoon a qudt:Unit .
 
 
-###  https://purl.org/net/recipeon/Thyme
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Thyme
 :Thyme :hasFlavorIngredient :Flavor ;
        :hasPreparatoryAction :Add ;
        :hasQuantity :1By2Teaspoon ;
        a :Herbs .
 
 
-###  https://purl.org/net/recipeon/WorcestershireSauce
+###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#WorcestershireSauce
 :WorcestershireSauce :hasFlavorIngredient :Flavor ;
                      :hasPreparatoryAction :Add2 ;
                      :hasQuantity :2Teaspoon ;
