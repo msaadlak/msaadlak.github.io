@@ -1,4 +1,4 @@
-@prefix : <https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#> .
+@prefix : <https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix po: <http://purl.obolibrary.org/obo/po.owl#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -11,10 +11,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix foodon: <http://purl.obolibrary.org/obo/foodon.owl#> .
-@base <https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl> .
+@base <https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl> .
 
 <https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl> a owl:Ontology ;
-                                        owl:versionIRI <https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#v/1.0> ;
+                                        owl:versionIRI <https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#v/1.0> ;
                                         dc:publisher "Recipe Evolution Group" ;
                                         dc:title "RecipeOn Ontology" ;
                                         terms:contributor <https://hajirajabeen.github.io> ,
@@ -28,7 +28,7 @@
                                         terms:modified "2023/03/22" ;
                                         terms:title "The RecipeOn Ontology (recipeon)"@en ;
                                         rdfs:comment "RecipeOn assists machines in understanding the semantics of recipes to encode the information crucial for personalized recipe generation. This includes nutritional information, ingredient-action relations, ingredient-diet relations, ingredient substitutions, and cooking time." ;
-                                        rdfs:isDefinedBy <https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl> ;
+                                        rdfs:isDefinedBy <https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl> ;
                                         rdfs:label "The RecipeOn Ontology"@en ;
                                         rdfs:seeAlso <https://hajirajabeen.github.io/EvoRecipesOntology/> .
 
@@ -224,7 +224,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                  rdfs:label "has duration"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#alternateAction
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#alternateAction
 :alternateAction rdf:type owl:ObjectProperty ;
                  rdfs:domain owl:Action ;
                  rdfs:range owl:Action ;
@@ -233,7 +233,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                  rdfs:label "Alternate Action"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#directlyFollowsProcedure
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#directlyFollowsProcedure
 :directlyFollowsProcedure rdf:type owl:ObjectProperty ;
                           owl:inverseOf :directlyPrecedesProcedure ;
                           rdfs:domain :Procedure ;
@@ -242,7 +242,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                           rdfs:label "directly follows procedures"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#directlyPrecedesProcedure
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#directlyPrecedesProcedure
 :directlyPrecedesProcedure rdf:type owl:ObjectProperty ;
                            rdfs:domain :Procedure ;
                            rdfs:range :Procedure ;
@@ -250,7 +250,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                            rdfs:label "directly precedes procedure"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasAction
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasAction
 :hasAction rdf:type owl:ObjectProperty ;
            owl:inverseOf :hasActionIngredient ;
            rdfs:domain :Ingredient ;
@@ -259,7 +259,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
            rdfs:label "has action"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasActionIngredient
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasActionIngredient
 :hasActionIngredient rdf:type owl:ObjectProperty ;
                      rdfs:domain owl:Action ;
                      rdfs:range :Ingredient ;
@@ -267,7 +267,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                      rdfs:label "has action ingredient"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasActionProcedure
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasActionProcedure
 :hasActionProcedure rdf:type owl:ObjectProperty ;
                     owl:inverseOf :hasProcedureAction ;
                     rdfs:domain owl:Action ;
@@ -276,7 +276,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                     rdfs:label "has action procedure"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasAggregateRating
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasAggregateRating
 :hasAggregateRating rdf:type owl:ObjectProperty ;
                     rdfs:domain <https://schema.org/Recipe> ;
                     rdfs:range <https://schema.org/AggregateRating> ;
@@ -285,7 +285,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                     rdfs:label "has aggregate rating"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasAlternateIngredient
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasAlternateIngredient
 :hasAlternateIngredient rdf:type owl:ObjectProperty ;
                         rdfs:domain :Ingredient ;
                         rdfs:range :Ingredient ;
@@ -294,7 +294,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                         rdfs:label "has alternate ingredient"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasAlternateProcedure
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasAlternateProcedure
 :hasAlternateProcedure rdf:type owl:ObjectProperty ;
                        rdfs:domain :Procedure ;
                        rdfs:range :Procedure ;
@@ -303,7 +303,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                        rdfs:label "has alternate procedure"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasCookingAction
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasCookingAction
 :hasCookingAction rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :hasAction ;
                   rdfs:domain :Ingredient ;
@@ -312,7 +312,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                   rdfs:label "has cooking action"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasFlavorIngredient
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasFlavorIngredient
 :hasFlavorIngredient rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :hasType ;
                      rdfs:domain :Ingredient ;
@@ -321,7 +321,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                      rdfs:label "has flavor ingredient"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasIngredient
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasIngredient
 :hasIngredient rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf <https://schema.org/hasPart> ;
                rdfs:domain <https://schema.org/Recipe> ;
@@ -330,7 +330,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                rdfs:label "has ingredient"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasMainIngredient
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasMainIngredient
 :hasMainIngredient rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasType ;
                    rdfs:domain :Ingredient ;
@@ -339,21 +339,21 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                    rdfs:label "has main ingredient"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasNutrientQuantity
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasNutrientQuantity
 :hasNutrientQuantity rdf:type owl:ObjectProperty ;
                      rdfs:domain :Nutrient ;
                      rdfs:range qudt:Quantity ;
                      rdf:type owl:ObjectProperty .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasNutrientType
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasNutrientType
 :hasNutrientType rdf:type owl:ObjectProperty ;
                  rdfs:domain <https://schema.org/NutritionInformation> ;
                  rdfs:range :Nutrient ;
                  rdf:type owl:ObjectProperty .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasPostCookingAction
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasPostCookingAction
 :hasPostCookingAction rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :hasAction ;
                       rdfs:domain :Ingredient ;
@@ -362,7 +362,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                       rdfs:label "has post cooking action"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasPreparatoryAction
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasPreparatoryAction
 :hasPreparatoryAction rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :hasAction ;
                       rdfs:domain :Ingredient ;
@@ -371,7 +371,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                       rdfs:label "has preparatory action"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasProcedure
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasProcedure
 :hasProcedure rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <https://schema.org/hasPart> ;
               rdfs:domain <https://schema.org/Recipe> ;
@@ -380,7 +380,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
               rdfs:label "has procedure"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasProcedureAction
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasProcedureAction
 :hasProcedureAction rdf:type owl:ObjectProperty ;
                     rdfs:domain :Procedure ;
                     rdfs:range owl:Action ;
@@ -388,7 +388,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                     rdfs:label "has procedure action"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasProcedureIngredient
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasProcedureIngredient
 :hasProcedureIngredient rdf:type owl:ObjectProperty ;
                         rdfs:domain :Procedure ;
                         rdfs:range :Ingredient ;
@@ -396,7 +396,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                         rdfs:label "hasProcedureAction"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasQuantity
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasQuantity
 :hasQuantity rdf:type owl:ObjectProperty ;
              rdfs:domain :Ingredient ;
              rdfs:range qudt:Quantity ;
@@ -404,7 +404,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
              rdfs:label "has quantity"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasSideIngredient
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasSideIngredient
 :hasSideIngredient rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasType ;
                    rdfs:domain :Ingredient ;
@@ -413,7 +413,7 @@ owl:has_duration rdf:type owl:ObjectProperty ;
                    rdfs:label "has side ingredient"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasType
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasType
 :hasType rdf:type owl:ObjectProperty ;
          rdfs:domain :Ingredient ;
          rdfs:range :IngredientType ;
@@ -553,7 +553,7 @@ qudt:hasNumericValue rdf:type owl:DatatypeProperty ;
                         rdfs:label "url"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasCourseName
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasCourseName
 :hasCourseName rdf:type owl:DatatypeProperty ;
                rdfs:domain <https://schema.org/Recipe> ;
                rdfs:range xsd:string ;
@@ -561,7 +561,7 @@ qudt:hasNumericValue rdf:type owl:DatatypeProperty ;
                rdfs:label "has course name"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasDifficultyLevel
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasDifficultyLevel
 :hasDifficultyLevel rdf:type owl:DatatypeProperty ;
                     rdfs:domain <https://schema.org/Recipe> ;
                     rdfs:range xsd:string ;
@@ -569,7 +569,7 @@ qudt:hasNumericValue rdf:type owl:DatatypeProperty ;
                     rdfs:label "has difficulty level"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasMealType
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasMealType
 :hasMealType rdf:type owl:DatatypeProperty ;
              rdfs:domain <https://schema.org/Recipe> ;
              rdfs:range xsd:string ;
@@ -577,7 +577,7 @@ qudt:hasNumericValue rdf:type owl:DatatypeProperty ;
              rdfs:label "has meal type"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#hasNutrientName
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasNutrientName
 :hasNutrientName rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Nutrient ;
                  rdfs:range xsd:string ;
@@ -1144,14 +1144,14 @@ owl:Action rdf:type owl:Class ;
            rdfs:label "Action"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Alcohol
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Alcohol
 :Alcohol rdf:type owl:Class ;
          rdfs:subClassOf :Liquids ;
          rdf:type owl:Class ;
          rdfs:label "Alcohol"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Apple
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Apple
 :Apple rdf:type owl:Class ;
        rdfs:subClassOf :PomeFruit ;
        owl:disjointWith :Pear ;
@@ -1159,7 +1159,7 @@ owl:Action rdf:type owl:Class ;
        rdfs:label "Apple"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Apply
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Apply
 :Apply rdf:type owl:Class ;
        rdfs:subClassOf :Preparatory ;
        rdf:type owl:Class ;
@@ -1173,7 +1173,7 @@ Butter"""^^xsd:string ;
        rdfs:label "Apply"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#AsianNoodle
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#AsianNoodle
 :AsianNoodle rdf:type owl:Class ;
              rdfs:subClassOf :GrainProducts ;
              rdf:about "https://en.wikipedia.org/wiki/Noodle"@en ;
@@ -1182,33 +1182,33 @@ Butter"""^^xsd:string ;
              rdfs:label "Asian Noodle"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#AsianSquash
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#AsianSquash
 :AsianSquash rdf:type owl:Class ;
              rdfs:subClassOf :FruitVegetables ;
              rdf:type owl:Class ;
              rdfs:label "Asian Squash"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Avocados
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Avocados
 :Avocados rdf:type owl:Class ;
           rdfs:subClassOf :FruitVegetables ;
           rdf:type owl:Class ;
           rdfs:label "Avocados"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Bacon
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Bacon
 :Bacon rdf:type owl:Class ;
        rdfs:subClassOf :CurvedMeats ;
        rdf:type owl:Class ;
        rdfs:label "Bacon"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Bake
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Bake
 :Bake rdf:type owl:Class ;
       rdfs:subClassOf :Cooking .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#BakedGoods
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#BakedGoods
 :BakedGoods rdf:type owl:Class ;
             rdfs:subClassOf :Ingredient ;
             rdf:about "Baked goods are foods made from dough or batter and cooked by baking, a method of cooking food that uses prolonged dry heat, normally in an oven, but also in hot ashes, or on hot stones."@en ,
@@ -1217,7 +1217,7 @@ Butter"""^^xsd:string ;
             rdfs:label "Baked Goods"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Barley
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Barley
 :Barley rdf:type owl:Class ;
         rdfs:subClassOf :Grains ;
         rdf:about "https://en.wikipedia.org/wiki/Barley"@en ;
@@ -1226,14 +1226,14 @@ Butter"""^^xsd:string ;
         rdfs:label "Barley"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#BeanProducts
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#BeanProducts
 :BeanProducts rdf:type owl:Class ;
               rdfs:subClassOf :Legumes ;
               rdf:type owl:Class ;
               rdfs:label "BeanProducts"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Beef
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Beef
 :Beef rdf:type owl:Class ;
       rdfs:subClassOf :Meats ;
       rdf:about "https://en.wikipedia.org/wiki/Beef"@en ;
@@ -1242,7 +1242,7 @@ Butter"""^^xsd:string ;
       rdfs:label "Beef"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Bend
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Bend
 :Bend rdf:type owl:Class ;
       rdfs:subClassOf :Preparatory ;
       rdf:type owl:Class ;
@@ -1257,7 +1257,7 @@ Unmold"""@en ;
       rdfs:label "Bend"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Berries
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Berries
 :Berries rdf:type owl:Class ;
          rdfs:subClassOf :Fruits ;
          rdf:about "https://en.wikipedia.org/wiki/Berry"@en ;
@@ -1266,14 +1266,14 @@ Unmold"""@en ;
          rdfs:label "Berries"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#BlueCheese
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#BlueCheese
 :BlueCheese rdf:type owl:Class ;
             rdfs:subClassOf :Cheese ;
             rdf:type owl:Class ;
             rdfs:label "Blue Cheese"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Boil
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Boil
 :Boil rdf:type owl:Class ;
       rdfs:subClassOf :Cooking ;
       rdf:about "https://en.wikipedia.org/wiki/Boiling"@en ;
@@ -1282,7 +1282,7 @@ Unmold"""@en ;
       rdfs:label "Boil"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Bread
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Bread
 :Bread rdf:type owl:Class ;
        rdfs:subClassOf :BakedGoods ;
        rdf:about "https://en.wikipedia.org/wiki/Bread"@en ;
@@ -1291,7 +1291,7 @@ Unmold"""@en ;
        rdfs:label "Bread"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#BuckWheat
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#BuckWheat
 :BuckWheat rdf:type owl:Class ;
            rdfs:subClassOf :Grains ;
            rdf:about "https://en.wikipedia.org/wiki/Buckwheat"@en ;
@@ -1300,7 +1300,7 @@ Unmold"""@en ;
            rdfs:label "Buck Wheat"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Bulb
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Bulb
 :Bulb rdf:type owl:Class ;
       rdfs:subClassOf :Vegetable ;
       rdf:type owl:Class ;
@@ -1308,7 +1308,7 @@ Unmold"""@en ;
       rdfs:label "Bulb"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Burn
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Burn
 :Burn rdf:type owl:Class ;
       rdfs:subClassOf :Cooking ;
       rdf:about "https://dictionary.cambridge.org/us/thesaurus/articles/to-burn-food"@en ;
@@ -1321,7 +1321,7 @@ Glaze: A glaze is a sauce that is cooked onto a protein or vegetable so that the
       rdfs:label "Burn"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cake
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Cake
 :Cake rdf:type owl:Class ;
       rdfs:subClassOf :BakedGoods ;
       rdf:about "https://en.wikipedia.org/wiki/Cake"@en ;
@@ -1330,21 +1330,21 @@ Glaze: A glaze is a sauce that is cooked onto a protein or vegetable so that the
       rdfs:label "Cake"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Candy
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Candy
 :Candy rdf:type owl:Class ;
        rdfs:subClassOf :Flavorings ;
        rdf:type owl:Class ;
        rdfs:label "Candy"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CaviarRoe
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#CaviarRoe
 :CaviarRoe rdf:type owl:Class ;
            rdfs:subClassOf :Fish ;
            rdf:type owl:Class ;
            rdfs:label "Caviar Roe"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cheese
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Cheese
 :Cheese rdf:type owl:Class ;
         rdfs:subClassOf :Dairy ;
         rdf:about "https://en.wikipedia.org/wiki/Cheese"@en ;
@@ -1353,14 +1353,14 @@ Glaze: A glaze is a sauce that is cooked onto a protein or vegetable so that the
         rdfs:label "Cheese"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CheeseSubstitute
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#CheeseSubstitute
 :CheeseSubstitute rdf:type owl:Class ;
                   rdfs:subClassOf :Cheese ;
                   rdf:type owl:Class ;
                   rdfs:label "Cheese Substitute"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Chocolate
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Chocolate
 :Chocolate rdf:type owl:Class ;
            rdfs:subClassOf :Flavorings ;
            rdf:about "https://en.wikipedia.org/wiki/Chocolate"@en ;
@@ -1369,7 +1369,7 @@ Glaze: A glaze is a sauce that is cooked onto a protein or vegetable so that the
            rdfs:label "Chocolate"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CitrusFruit
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#CitrusFruit
 :CitrusFruit rdf:type owl:Class ;
              rdfs:subClassOf :Fruits ;
              rdf:about "https://en.wikipedia.org/wiki/Citrus#Fruit"@en ;
@@ -1378,7 +1378,7 @@ Glaze: A glaze is a sauce that is cooked onto a protein or vegetable so that the
              rdfs:label "Citrus Fruit"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Clean
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Clean
 :Clean rdf:type owl:Class ;
        rdfs:subClassOf :Preparatory ;
        rdf:type owl:Class ;
@@ -1391,7 +1391,7 @@ Wipe:"""@en ;
        rdfs:label "Clean"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Coat
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Coat
 :Coat rdf:type owl:Class ;
       rdfs:subClassOf :Preparatory ;
       rdf:type owl:Class ;
@@ -1403,21 +1403,21 @@ Deglaze"""^^xsd:string ;
       rdfs:label "Coat"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#ColdCuts
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#ColdCuts
 :ColdCuts rdf:type owl:Class ;
           rdfs:subClassOf :CurvedMeats ;
           rdf:type owl:Class ;
           rdfs:label "Cold Cuts"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CommonTropicalFruit
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#CommonTropicalFruit
 :CommonTropicalFruit rdf:type owl:Class ;
                      rdfs:subClassOf :Fruits ;
                      rdf:type owl:Class ;
                      rdfs:label "CommonTropicalFruit"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cookie
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Cookie
 :Cookie rdf:type owl:Class ;
         rdfs:subClassOf :BakedGoods ;
         rdf:about "A cookie (American English), or a biscuit (British English), is a baked or cooked snack or dessert that is typically small, flat and sweet. It usually contains flour, sugar, egg, and some type of oil, fat, or butter. It may include other ingredients such as raisins, oats, chocolate chips, nuts, etc."@en ,
@@ -1426,7 +1426,7 @@ Deglaze"""^^xsd:string ;
         rdfs:label "Cookie"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cooking
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Cooking
 :Cooking rdf:type owl:Class ;
          rdfs:subClassOf owl:Action ;
          owl:disjointWith [ rdf:type owl:Class ;
@@ -1440,14 +1440,14 @@ Deglaze"""^^xsd:string ;
          rdfs:label "Cooking"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CookingGreens
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#CookingGreens
 :CookingGreens rdf:type owl:Class ;
                rdfs:subClassOf :Vegetable ;
                rdf:type owl:Class ;
                rdfs:label "Cooking Greens"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cool
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Cool
 :Cool rdf:type owl:Class ;
       rdfs:subClassOf :PostCooking ;
       rdf:type owl:Class ;
@@ -1460,7 +1460,7 @@ Frost"""@en ;
       rdfs:label "Cool"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Corn
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Corn
 :Corn rdf:type owl:Class ;
       rdfs:subClassOf :Grains ;
       rdf:about "https://en.wikipedia.org/wiki/Maize"@en ;
@@ -1469,7 +1469,7 @@ Frost"""@en ;
       rdfs:label "Corn"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cracker
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Cracker
 :Cracker rdf:type owl:Class ;
          rdfs:subClassOf :BakedGoods ;
          rdf:about "https://en.wikipedia.org/wiki/Cracker_(food)"@en ;
@@ -1478,21 +1478,21 @@ Frost"""@en ;
          rdfs:label "Cracker"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Crumb
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Crumb
 :Crumb rdf:type owl:Class ;
        rdfs:subClassOf :BakedGoods ;
        rdf:type owl:Class ;
        rdfs:label "Crumb"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cucumber
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Cucumber
 :Cucumber rdf:type owl:Class ;
           rdfs:subClassOf :FruitVegetables ;
           rdf:type owl:Class ;
           rdfs:label "Cucumbers"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CulturedMilkProducts
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#CulturedMilkProducts
 :CulturedMilkProducts rdf:type owl:Class ;
                       rdfs:subClassOf :Dairy ;
                       rdf:about "https://en.wikipedia.org/wiki/Fermented_milk_products"@en ;
@@ -1501,14 +1501,14 @@ Frost"""@en ;
                       rdfs:label "Cultured Milk Products"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#CurvedMeats
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#CurvedMeats
 :CurvedMeats rdf:type owl:Class ;
              rdfs:subClassOf :Meats ;
              rdf:type owl:Class ;
              rdfs:label "Curved Meats"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cut
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Cut
 :Cut rdf:type owl:Class ;
      rdfs:subClassOf :Preparatory ;
      rdf:type owl:Class ;
@@ -1528,21 +1528,21 @@ Quarter"""@en ;
      rdfs:label "Cut"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Dairy
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Dairy
 :Dairy rdf:type owl:Class ;
        rdfs:subClassOf :Ingredient ;
        rdf:type owl:Class ;
        rdfs:label "Dairy"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DairyMilkCream
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#DairyMilkCream
 :DairyMilkCream rdf:type owl:Class ;
                 rdfs:subClassOf :MilkCream ;
                 rdf:type owl:Class ;
                 rdfs:label "Dairy Milk Cream"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Dip
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Dip
 :Dip rdf:type owl:Class ;
      rdfs:subClassOf :Preparatory ;
      rdf:type owl:Class ;
@@ -1555,7 +1555,7 @@ Immerse:"""@en ;
      rdfs:label "Dip"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DirectHeat
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#DirectHeat
 :DirectHeat rdf:type owl:Class ;
             rdfs:subClassOf :Cooking ;
             rdf:type owl:Class ;
@@ -1571,21 +1571,21 @@ Grill"""@en ;
             rdfs:label "DirectHeat"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DriedBeans
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#DriedBeans
 :DriedBeans rdf:type owl:Class ;
             rdfs:subClassOf :Legumes ;
             rdf:type owl:Class ;
             rdfs:label "DriedBeans"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DriedChile
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#DriedChile
 :DriedChile rdf:type owl:Class ;
             rdfs:subClassOf :FruitVegetables ;
             rdf:type owl:Class ;
             rdfs:label "Dried Chile"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DriedFruit
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#DriedFruit
 :DriedFruit rdf:type owl:Class ;
             rdfs:subClassOf :Fruits ;
             rdf:about "https://en.wikipedia.org/wiki/Dried_fruit"@en ;
@@ -1594,21 +1594,21 @@ Grill"""@en ;
             rdfs:label "Dried Fruit"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DriedMeats
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#DriedMeats
 :DriedMeats rdf:type owl:Class ;
             rdfs:subClassOf :Meats ;
             rdf:type owl:Class ;
             rdfs:label "DriedMeats"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#DriedPeas
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#DriedPeas
 :DriedPeas rdf:type owl:Class ;
            rdfs:subClassOf :Legumes ;
            rdf:type owl:Class ;
            rdfs:label "DriedPeas"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#EdiblePods
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#EdiblePods
 :EdiblePods rdf:type owl:Class ;
             rdfs:subClassOf :Legumes ,
                             :Vegetable ;
@@ -1618,28 +1618,28 @@ Grill"""@en ;
             rdfs:label "EdiblePods"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#EggPlants
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#EggPlants
 :EggPlants rdf:type owl:Class ;
            rdfs:subClassOf :FruitVegetables ;
            rdf:type owl:Class ;
            rdfs:label "Egg Plants"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#ExoticTropicalFruit
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#ExoticTropicalFruit
 :ExoticTropicalFruit rdf:type owl:Class ;
                      rdfs:subClassOf :Fruits ;
                      rdf:type owl:Class ;
                      rdfs:label "Exotic Tropical Fruit"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#ExtractsEssences
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#ExtractsEssences
 :ExtractsEssences rdf:type owl:Class ;
                   rdfs:subClassOf :Flavorings ;
                   rdf:type owl:Class ;
                   rdfs:label "Extracts Essences"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Fats
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Fats
 :Fats rdf:type owl:Class ;
       rdfs:subClassOf :FatsOils ;
       rdf:type owl:Class ;
@@ -1647,28 +1647,28 @@ Grill"""@en ;
       rdfs:label "Fats"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FatsOils
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FatsOils
 :FatsOils rdf:type owl:Class ;
           rdfs:subClassOf :Ingredient ;
           rdf:type owl:Class ;
           rdfs:label "Fats Oils"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FattyFirmTextured
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FattyFirmTextured
 :FattyFirmTextured rdf:type owl:Class ;
                    rdfs:subClassOf :Fish ;
                    rdf:type owl:Class ;
                    rdfs:label "Fatty Firm Textured"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FattyFlakyTextured
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FattyFlakyTextured
 :FattyFlakyTextured rdf:type owl:Class ;
                     rdfs:subClassOf :Fish ;
                     rdf:type owl:Class ;
                     rdfs:label "FattyFlakyTextured"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Finish
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Finish
 :Finish rdf:type owl:Class ;
         rdfs:subClassOf :PostCooking ;
         rdf:type owl:Class ;
@@ -1684,28 +1684,28 @@ Layer:"""@en ;
         rdfs:label "Finish"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FirmCheese
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FirmCheese
 :FirmCheese rdf:type owl:Class ;
             rdfs:subClassOf :Cheese ;
             rdf:type owl:Class ;
             rdfs:label "Firm Cheese"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Fish
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Fish
 :Fish rdf:type owl:Class ;
       rdfs:subClassOf :Ingredient ;
       rdf:type owl:Class ;
       rdfs:label "Fish"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FlatBread
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FlatBread
 :FlatBread rdf:type owl:Class ;
            rdfs:subClassOf :BakedGoods ;
            rdf:type owl:Class ;
            rdfs:label "FlatBread"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FlavorIngredient
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FlavorIngredient
 :FlavorIngredient rdf:type owl:Class ;
                   rdfs:subClassOf :IngredientType ;
                   owl:disjointWith [ rdf:type owl:Class ;
@@ -1718,21 +1718,21 @@ Layer:"""@en ;
                              "If an ingredient role is of flavoring in a recipe then it come unders the flavor ingredient."@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Flavorings
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Flavorings
 :Flavorings rdf:type owl:Class ;
             rdfs:subClassOf :Ingredient ;
             rdf:type owl:Class ;
             rdfs:label "Flavorings"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FoodWrapper
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FoodWrapper
 :FoodWrapper rdf:type owl:Class ;
              rdfs:subClassOf :GrainProducts ;
              rdf:type owl:Class ;
              rdfs:label "FoodWrapper"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FreshBeans
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FreshBeans
 :FreshBeans rdf:type owl:Class ;
             rdfs:subClassOf :Legumes ,
                             :Vegetable ;
@@ -1741,21 +1741,21 @@ Layer:"""@en ;
             rdfs:label "FreshBeans"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FreshCheese
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FreshCheese
 :FreshCheese rdf:type owl:Class ;
              rdfs:subClassOf :Cheese ;
              rdf:type owl:Class ;
              rdfs:label "Fresh Cheese"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FreshChile
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FreshChile
 :FreshChile rdf:type owl:Class ;
             rdfs:subClassOf :FruitVegetables ;
             rdf:type owl:Class ;
             rdfs:label "Fresh Chile"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FreshPeas
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FreshPeas
 :FreshPeas rdf:type owl:Class ;
            rdfs:subClassOf :Legumes ,
                            :Vegetable ;
@@ -1763,7 +1763,7 @@ Layer:"""@en ;
            rdfs:label "FreshPeas"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FruitButters
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FruitButters
 :FruitButters rdf:type owl:Class ;
               rdfs:subClassOf :Fruits ;
               rdf:about "https://en.wikipedia.org/wiki/Fruit_butter"@en ;
@@ -1772,7 +1772,7 @@ Layer:"""@en ;
               rdfs:label "Fruit Butters"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FruitJuices
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FruitJuices
 :FruitJuices rdf:type owl:Class ;
              rdfs:subClassOf :Fruits ;
              rdf:about "https://en.wikipedia.org/wiki/Juice"@en ;
@@ -1781,7 +1781,7 @@ Layer:"""@en ;
              rdfs:label "Fruit Jucies"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FruitVegetables
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FruitVegetables
 :FruitVegetables rdf:type owl:Class ;
                  rdfs:subClassOf :Fruits ,
                                  :Vegetable ;
@@ -1789,7 +1789,7 @@ Layer:"""@en ;
                  rdfs:label "Fruit Vegetables"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Fruits
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Fruits
 :Fruits rdf:type owl:Class ;
         rdfs:subClassOf :Ingredient ;
         rdf:type owl:Class ,
@@ -1797,7 +1797,7 @@ Layer:"""@en ;
         rdfs:label "Fruit"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Fry
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Fry
 :Fry rdf:type owl:Class ;
      rdfs:subClassOf :Cooking ;
      rdf:about "https://en.wikipedia.org/wiki/Frying"@en ;
@@ -1814,14 +1814,14 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
      rdfs:label "Fry"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#GameMeat
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#GameMeat
 :GameMeat rdf:type owl:Class ;
           rdfs:subClassOf :Meats ;
           rdf:type owl:Class ;
           rdfs:label "GameMeat"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Gelatin
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Gelatin
 :Gelatin rdf:type owl:Class ;
          rdfs:subClassOf :Thickener ;
          owl:disjointWith :StarchThickener ;
@@ -1829,28 +1829,28 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
          rdfs:label "Gleatin"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#GrainProducts
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#GrainProducts
 :GrainProducts rdf:type owl:Class ;
                rdfs:subClassOf :Ingredient ;
                rdf:type owl:Class ;
                rdfs:label "GrainProducts"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Grains
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Grains
 :Grains rdf:type owl:Class ;
         rdfs:subClassOf :Ingredient ;
         rdf:type owl:Class ;
         rdfs:label "Grains"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Ham
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Ham
 :Ham rdf:type owl:Class ;
      rdfs:subClassOf :CurvedMeats ;
      rdf:type owl:Class ;
      rdfs:label "Ham"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#HerbSpiceMix
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#HerbSpiceMix
 :HerbSpiceMix rdf:type owl:Class ;
               rdfs:subClassOf :Flavorings ;
               rdf:about "https://en.wikipedia.org/wiki/Herb"@en ;
@@ -1859,7 +1859,7 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
               rdfs:label "Herb Spice Mix"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Herbs
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Herbs
 :Herbs rdf:type owl:Class ;
        rdfs:subClassOf :Flavorings ;
        rdf:about "https://en.wikipedia.org/wiki/Herb"@en ;
@@ -1868,14 +1868,14 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
        rdfs:label "Herbs"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#InflorescentVegetables
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#InflorescentVegetables
 :InflorescentVegetables rdf:type owl:Class ;
                         rdfs:subClassOf :Vegetable ;
                         rdf:type owl:Class ;
                         rdfs:label "InflorescentVegetables"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Ingredient
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Ingredient
 :Ingredient rdf:type owl:Class ;
             rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty :hasAction ;
@@ -1896,13 +1896,13 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
             rdfs:label "Ingredient"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#IngredientType
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#IngredientType
 :IngredientType rdf:type owl:Class ;
                 rdf:type owl:Class ;
                 rdfs:label "IngredientType"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Juices
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Juices
 :Juices rdf:type owl:Class ;
         rdfs:subClassOf :Flavorings ,
                         :Liquids ;
@@ -1912,7 +1912,7 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
         rdfs:label "Juices"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Kamut
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Kamut
 :Kamut rdf:type owl:Class ;
        rdfs:subClassOf :Grains ;
        rdf:about "https://en.wikipedia.org/wiki/Khorasan_wheat"@en ;
@@ -1921,7 +1921,7 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
        rdfs:label "Kamut"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Lamb
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Lamb
 :Lamb rdf:type owl:Class ;
       rdfs:subClassOf :Meats ;
       rdf:about "https://en.wikipedia.org/wiki/Lamb_and_mutton"@en ;
@@ -1930,28 +1930,28 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
       rdfs:label "Lamb"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#LeanFirmTextured
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#LeanFirmTextured
 :LeanFirmTextured rdf:type owl:Class ;
                   rdfs:subClassOf :Fish ;
                   rdf:type owl:Class ;
                   rdfs:label "LearnFirmTextured"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#LeanFlakyTextured
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#LeanFlakyTextured
 :LeanFlakyTextured rdf:type owl:Class ;
                    rdfs:subClassOf :Fish ;
                    rdf:type owl:Class ;
                    rdfs:label "LeanFlakyTextured"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Legumes
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Legumes
 :Legumes rdf:type owl:Class ;
          rdfs:subClassOf :Ingredient ;
          rdf:type owl:Class ;
          rdfs:label "Legumes"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Lentils
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Lentils
 :Lentils rdf:type owl:Class ;
          rdfs:subClassOf :Ingredient ;
          rdf:about "https://en.wikipedia.org/wiki/Lentil"@en ;
@@ -1960,14 +1960,14 @@ Braise: fry (food) lightly and then stew it slowly in a closed container."""@en 
          rdfs:label "Lentils"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#LiquidSweetner
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#LiquidSweetner
 :LiquidSweetner rdf:type owl:Class ;
                 rdfs:subClassOf :Liquids ;
                 rdf:type owl:Class ;
                 rdfs:label "LiquidSweetner"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#LiquidSweetners
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#LiquidSweetners
 :LiquidSweetners rdf:type owl:Class ;
                  rdfs:subClassOf :Flavorings ;
                  rdf:about "https://en.wikipedia.org/wiki/Syrup"@en ;
@@ -1983,21 +1983,21 @@ High fructose corn syrup"""@en ;
                  rdfs:label "Liquid Sweetners"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Liquids
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Liquids
 :Liquids rdf:type owl:Class ;
          rdfs:subClassOf :Ingredient ;
          rdf:type owl:Class ;
          rdfs:label "Liquids"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Liquors
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Liquors
 :Liquors rdf:type owl:Class ;
          rdfs:subClassOf :Flavorings ;
          rdf:type owl:Class ;
          rdfs:label "Liquors"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Lubricate
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Lubricate
 :Lubricate rdf:type owl:Class ;
            rdfs:subClassOf :Preparatory ;
            rdf:type owl:Class ;
@@ -2009,7 +2009,7 @@ Smear:"""@en ;
            rdfs:label "Lubricate"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#MainIngredient
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#MainIngredient
 :MainIngredient rdf:type owl:Class ;
                 rdfs:subClassOf :IngredientType ;
                 owl:disjointWith [ rdf:type owl:Class ;
@@ -2022,7 +2022,7 @@ Smear:"""@en ;
                            "if any ingredient name is the part of recipe title then this ingredient would be classified as main ingredient."@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#MeatSpecific
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#MeatSpecific
 :MeatSpecific rdf:type owl:Class ;
               rdfs:subClassOf :Preparatory ;
               rdf:type owl:Class ;
@@ -2031,14 +2031,14 @@ DeBone:"""@en ;
               rdfs:label "MeatSpecific"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Meats
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Meats
 :Meats rdf:type owl:Class ;
        rdfs:subClassOf :Ingredient ;
        rdf:type owl:Class ;
        rdfs:label "Meat"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Melons
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Melons
 :Melons rdf:type owl:Class ;
         rdfs:subClassOf :Fruits ;
         rdf:type owl:Class ;
@@ -2047,7 +2047,7 @@ DeBone:"""@en ;
                    "https://en.wikipedia.org/wiki/Melon"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Melt
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Melt
 :Melt rdf:type owl:Class ;
       rdfs:subClassOf :Preparatory ;
       rdf:type owl:Class ;
@@ -2060,7 +2060,7 @@ Soften:"""@en ;
       rdfs:label "Melt"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Microwave
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Microwave
 :Microwave rdf:type owl:Class ;
            rdfs:subClassOf :Cooking ;
            rdf:about "https://en.wikipedia.org/wiki/Microwave_oven"@en ;
@@ -2072,7 +2072,7 @@ Preheat"""@en ;
            rdfs:label "Microwave"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#MilkCream
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#MilkCream
 :MilkCream rdf:type owl:Class ;
            rdfs:subClassOf :Dairy ;
            rdf:about "https://en.wikipedia.org/wiki/Cream"@en ;
@@ -2081,7 +2081,7 @@ Preheat"""@en ;
            rdfs:label "Milk Cream"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Mix
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Mix
 :Mix rdf:type owl:Class ;
      rdfs:subClassOf :Preparatory ,
                      [ rdf:type owl:Restriction ;
@@ -2103,7 +2103,7 @@ Shake"""@en ;
      rdfs:label "Mix"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Mushrooms
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Mushrooms
 :Mushrooms rdf:type owl:Class ;
            rdfs:subClassOf :Vegetable ;
            rdf:about "https://en.wikipedia.org/wiki/Mushroom"@en ;
@@ -2112,21 +2112,21 @@ Shake"""@en ;
            rdfs:label "Mushrooms"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#NonDairyMilkCream
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#NonDairyMilkCream
 :NonDairyMilkCream rdf:type owl:Class ;
                    rdfs:subClassOf :Liquids ;
                    rdf:type owl:Class ;
                    rdfs:label "Non Dairy Milk Cream"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#NonWheatFlour
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#NonWheatFlour
 :NonWheatFlour rdf:type owl:Class ;
                rdfs:subClassOf :GrainProducts ;
                rdf:type owl:Class ;
                rdfs:label "NoonWheatFlour"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Nutrient
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Nutrient
 :Nutrient rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :hasNutrientQuantity ;
@@ -2139,14 +2139,14 @@ Shake"""@en ;
           rdfs:label "Nutrient"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Nuts
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Nuts
 :Nuts rdf:type owl:Class ;
       rdfs:subClassOf :Flavorings ;
       rdf:type owl:Class ;
       rdfs:label "Nuts"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Oat
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Oat
 :Oat rdf:type owl:Class ;
      rdfs:subClassOf :Grains ;
      rdf:about "https://en.wikipedia.org/wiki/Oat"@en ;
@@ -2155,7 +2155,7 @@ Shake"""@en ;
      rdfs:label "Oat"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#OilCookingSprays
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#OilCookingSprays
 :OilCookingSprays rdf:type owl:Class ;
                   rdfs:subClassOf :FatsOils ;
                   rdf:about "https://en.wikipedia.org/wiki/Cooking_spray"@en ;
@@ -2164,14 +2164,14 @@ Shake"""@en ;
                   rdfs:label "Oil Cooking Sprays"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Olive
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Olive
 :Olive rdf:type owl:Class ;
        rdfs:subClassOf :FruitVegetables ;
        rdf:type owl:Class ;
        rdfs:label "Olive"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Pasta
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Pasta
 :Pasta rdf:type owl:Class ;
        rdfs:subClassOf :GrainProducts ;
        rdf:about "https://en.wikipedia.org/wiki/Pasta"@en ;
@@ -2180,14 +2180,14 @@ Shake"""@en ;
        rdfs:label "Pasta"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Pear
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Pear
 :Pear rdf:type owl:Class ;
       rdfs:subClassOf :PomeFruit ;
       rdf:type owl:Class ;
       rdfs:label "Peer"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Peel
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Peel
 :Peel rdf:type owl:Class ;
       rdfs:subClassOf :Preparatory ;
       rdf:type owl:Class ;
@@ -2213,7 +2213,7 @@ Shuck:"""@en ;
       rdfs:label "Peel"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Placement
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Placement
 :Placement rdf:type owl:Class ;
            rdfs:subClassOf :Preparatory ;
            rdf:type owl:Class ;
@@ -2228,7 +2228,7 @@ Alternate:"""@en ;
            rdfs:label "Placement"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#PomeFruit
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#PomeFruit
 :PomeFruit rdf:type owl:Class ;
            rdfs:subClassOf :Fruits ;
            rdf:about "https://en.wikipedia.org/wiki/Pome"@en ;
@@ -2237,14 +2237,14 @@ Alternate:"""@en ;
            rdfs:label "Pome Fruit"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Pork
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Pork
 :Pork rdf:type owl:Class ;
       rdfs:subClassOf :Meats ;
       rdf:type owl:Class ;
       rdfs:label "Pork"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#PostCooking
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#PostCooking
 :PostCooking rdf:type owl:Class ;
              rdfs:subClassOf owl:Action ;
              owl:disjointWith [ rdf:type owl:Class ;
@@ -2257,7 +2257,7 @@ Alternate:"""@en ;
              rdfs:label "PostCooking"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Poultry
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Poultry
 :Poultry rdf:type owl:Class ;
          rdfs:subClassOf :Meats ;
          rdf:about "https://en.wikipedia.org/wiki/Poultry"@en ;
@@ -2266,7 +2266,7 @@ Alternate:"""@en ;
          rdfs:label "Poultry"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Preparatory
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Preparatory
 :Preparatory rdf:type owl:Class ;
              rdfs:subClassOf owl:Action ;
              owl:disjointWith [ rdf:type owl:Class ;
@@ -2279,7 +2279,7 @@ Alternate:"""@en ;
              rdfs:label "Preparatory"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Preserves
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Preserves
 :Preserves rdf:type owl:Class ;
            rdfs:subClassOf :Flavorings ,
                            :Fruits ;
@@ -2287,7 +2287,7 @@ Alternate:"""@en ;
            rdfs:label "Preservers"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Procedure
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Procedure
 :Procedure rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :hasProcedureAction ;
@@ -2303,14 +2303,14 @@ Alternate:"""@en ;
            rdfs:label "Procedure"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#ProcessedChesse
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#ProcessedChesse
 :ProcessedChesse rdf:type owl:Class ;
                  rdfs:subClassOf :Cheese ;
                  rdf:type owl:Class ;
                  rdfs:label "Processed Chesse"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Refine
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Refine
 :Refine rdf:type owl:Class ;
         rdfs:subClassOf :Preparatory ;
         rdf:type owl:Class ;
@@ -2322,7 +2322,7 @@ Skim"""^^xsd:string ;
         rdfs:label "Refine"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Remove
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Remove
 :Remove rdf:type owl:Class ;
         rdfs:subClassOf :Preparatory ;
         rdf:type owl:Class ;
@@ -2334,7 +2334,7 @@ Discard"""@en ;
         rdfs:label "Remove"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Rice
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Rice
 :Rice rdf:type owl:Class ;
       rdfs:subClassOf :Grains ;
       rdf:about "https://en.wikipedia.org/wiki/Rice"@en ;
@@ -2343,7 +2343,7 @@ Discard"""@en ;
       rdfs:label "Rice"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Roots
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Roots
 :Roots rdf:type owl:Class ;
        rdfs:subClassOf :Vegetable ;
        rdf:about "https://en.wikipedia.org/wiki/Root_vegetable"@en ;
@@ -2352,7 +2352,7 @@ Discard"""@en ;
        rdfs:label "Roots"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Rye
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Rye
 :Rye rdf:type owl:Class ;
      rdfs:subClassOf :Grains ;
      rdf:about "https://en.wikipedia.org/wiki/Rye"@en ;
@@ -2361,7 +2361,7 @@ Discard"""@en ;
      rdfs:label "Rye"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SaladGreens
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#SaladGreens
 :SaladGreens rdf:type owl:Class ;
              rdfs:subClassOf :Vegetable ;
              rdf:about "https://en.wikipedia.org/wiki/Salad"@en ;
@@ -2370,14 +2370,14 @@ Discard"""@en ;
              rdfs:label "Salad Greens"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Sausages
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Sausages
 :Sausages rdf:type owl:Class ;
           rdfs:subClassOf :CurvedMeats ;
           rdf:type owl:Class ;
           rdfs:label "Sausages"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Scramble
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Scramble
 :Scramble rdf:type owl:Class ;
           rdfs:subClassOf :Cooking ;
           rdf:type owl:Class ;
@@ -2385,7 +2385,7 @@ Discard"""@en ;
           rdfs:label "Scramble"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SeaVegetables
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#SeaVegetables
 :SeaVegetables rdf:type owl:Class ;
                rdfs:subClassOf :Vegetable ;
                rdf:about "https://en.wikipedia.org/wiki/Edible_seaweed"@en ;
@@ -2394,7 +2394,7 @@ Discard"""@en ;
                rdfs:label "Sea Vegetables"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Season
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Season
 :Season rdf:type owl:Class ;
         rdfs:subClassOf :Preparatory ;
         rdf:type owl:Class ;
@@ -2407,35 +2407,35 @@ Re-season"""@en ;
         rdfs:label "Season"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Seeds
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Seeds
 :Seeds rdf:type owl:Class ;
        rdfs:subClassOf :Flavorings ;
        rdf:type owl:Class ;
        rdfs:label "Seeds"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SemiFirmCheese
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#SemiFirmCheese
 :SemiFirmCheese rdf:type owl:Class ;
                 rdfs:subClassOf :Cheese ;
                 rdf:type owl:Class ;
                 rdfs:label "Semi Firm Cheese"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SemiSoftCheese
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#SemiSoftCheese
 :SemiSoftCheese rdf:type owl:Class ;
                 rdfs:subClassOf :Cheese ;
                 rdf:type owl:Class ;
                 rdfs:label "Semi Soft Cheese"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#ShellFish
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#ShellFish
 :ShellFish rdf:type owl:Class ;
            rdfs:subClassOf :Fish ;
            rdf:type owl:Class ;
            rdfs:label "ShellFish"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SideIngredient
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#SideIngredient
 :SideIngredient rdf:type owl:Class ;
                 rdfs:subClassOf :IngredientType ;
                 owl:disjointWith [ rdf:type owl:Class ;
@@ -2448,7 +2448,7 @@ Re-season"""@en ;
                            "The ingredients other than main and flavoring ingredient are considered as side ingredients."@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SnapBeans
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#SnapBeans
 :SnapBeans rdf:type owl:Class ;
            rdfs:subClassOf :Legumes ,
                            :Vegetable ;
@@ -2456,7 +2456,7 @@ Re-season"""@en ;
            rdfs:label "Snap Beans"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Soak
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Soak
 :Soak rdf:type owl:Class ;
       rdfs:subClassOf :Preparatory ;
       rdf:type owl:Class ;
@@ -2467,21 +2467,21 @@ Immerse"""^^xsd:string ;
       rdfs:label "Soak"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SoftCheese
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#SoftCheese
 :SoftCheese rdf:type owl:Class ;
             rdfs:subClassOf :Cheese ;
             rdf:type owl:Class ;
             rdfs:label "Soft Cheese"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SoyProducts
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#SoyProducts
 :SoyProducts rdf:type owl:Class ;
              rdfs:subClassOf :Legumes ;
              rdf:type owl:Class ;
              rdfs:label "SoyProducts"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Spelt
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Spelt
 :Spelt rdf:type owl:Class ;
        rdfs:subClassOf :Grains ;
        rdf:about "https://en.wikipedia.org/wiki/Spelt"@en ;
@@ -2490,7 +2490,7 @@ Immerse"""^^xsd:string ;
        rdfs:label "Spelt"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Spices
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Spices
 :Spices rdf:type owl:Class ;
         rdfs:subClassOf :Flavorings ;
         rdf:about "https://en.wikipedia.org/wiki/Spice"@en ;
@@ -2499,7 +2499,7 @@ Immerse"""^^xsd:string ;
         rdfs:label "Spices"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Sprouts
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Sprouts
 :Sprouts rdf:type owl:Class ;
          rdfs:subClassOf :Vegetable ;
          rdf:about "https://en.wikipedia.org/wiki/Brussels_sprout"@en ;
@@ -2508,7 +2508,7 @@ Immerse"""^^xsd:string ;
          rdfs:label "Sprouts"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#StalkVegetables
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#StalkVegetables
 :StalkVegetables rdf:type owl:Class ;
                  rdfs:subClassOf :Vegetable ;
                  rdf:about "https://en.wikipedia.org/wiki/Celery"@en ;
@@ -2517,14 +2517,14 @@ Immerse"""^^xsd:string ;
                  rdfs:label "Stalk Vegetables"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#StarchThickener
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#StarchThickener
 :StarchThickener rdf:type owl:Class ;
                  rdfs:subClassOf :Thickener ;
                  rdf:type owl:Class ;
                  rdfs:label "StarchThickener"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Stems
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Stems
 :Stems rdf:type owl:Class ;
        rdfs:subClassOf :Vegetable ;
        rdf:type owl:Class ;
@@ -2532,14 +2532,14 @@ Immerse"""^^xsd:string ;
        rdfs:label "Stems"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Stocks
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Stocks
 :Stocks rdf:type owl:Class ;
         rdfs:subClassOf :Liquids ;
         rdf:type owl:Class ;
         rdfs:label "Stocks"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#StoneFruit
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#StoneFruit
 :StoneFruit rdf:type owl:Class ;
             rdfs:subClassOf :Fruits ;
             rdf:about "https://en.wikipedia.org/wiki/Drupe"@en ;
@@ -2548,7 +2548,7 @@ Immerse"""^^xsd:string ;
             rdfs:label "StoneFruit"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Storage
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Storage
 :Storage rdf:type owl:Class ;
          rdfs:subClassOf :PostCooking ;
          rdf:type owl:Class ;
@@ -2559,35 +2559,35 @@ Save"""@en ;
          rdfs:label "Storage"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SummerSquash
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#SummerSquash
 :SummerSquash rdf:type owl:Class ;
               rdfs:subClassOf :FruitVegetables ;
               rdf:type owl:Class ;
               rdfs:label "Summer Squash"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SweetPepper
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#SweetPepper
 :SweetPepper rdf:type owl:Class ;
              rdfs:subClassOf :FruitVegetables ;
              rdf:type owl:Class ;
              rdfs:label "Sweet Pepper"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Thickener
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Thickener
 :Thickener rdf:type owl:Class ;
            rdfs:subClassOf :GrainProducts ;
            rdf:type owl:Class ;
            rdfs:label "Thicker"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Tomatoes
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Tomatoes
 :Tomatoes rdf:type owl:Class ;
           rdfs:subClassOf :FruitVegetables ;
           rdf:type owl:Class ;
           rdfs:label "Tomatoes"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Triticale
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Triticale
 :Triticale rdf:type owl:Class ;
            rdfs:subClassOf :Grains ;
            rdf:about "https://en.wikipedia.org/wiki/Triticale"@en ;
@@ -2596,7 +2596,7 @@ Save"""@en ;
            rdfs:label "Triticale"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Tubers
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Tubers
 :Tubers rdf:type owl:Class ;
         rdfs:subClassOf :Vegetable ;
         rdf:about "https://en.wikipedia.org/wiki/Tuber"@en ;
@@ -2605,28 +2605,28 @@ Save"""@en ;
         rdfs:label "Tubers"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#VarietyMeats
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#VarietyMeats
 :VarietyMeats rdf:type owl:Class ;
               rdfs:subClassOf :Meats ;
               rdf:type owl:Class ;
               rdfs:label "VarietyMeats"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Veal
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Veal
 :Veal rdf:type owl:Class ;
       rdfs:subClassOf :Meats ;
       rdf:type owl:Class ;
       rdfs:label "Veal"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Vegetable
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Vegetable
 :Vegetable rdf:type owl:Class ;
            rdfs:subClassOf :Ingredient ;
            rdf:type owl:Class ;
            rdfs:label "Vegetable"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Vinegar
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Vinegar
 :Vinegar rdf:type owl:Class ;
          rdfs:subClassOf :Flavorings ,
                          :Liquids ;
@@ -2636,14 +2636,14 @@ Save"""@en ;
          rdfs:label "Vinegar"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#WaterSoda
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#WaterSoda
 :WaterSoda rdf:type owl:Class ;
            rdfs:subClassOf :Liquids ;
            rdf:type owl:Class ;
            rdfs:label "Water Soda"@en .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Wheat
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Wheat
 :Wheat rdf:type owl:Class ;
        rdfs:subClassOf :Grains ;
        rdf:about "https://en.wikipedia.org/wiki/Wheat"@en ;
@@ -2652,7 +2652,7 @@ Save"""@en ;
        rdfs:label "Wheat"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#WheatFlour
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#WheatFlour
 :WheatFlour rdf:type owl:Class ;
             rdfs:subClassOf :GrainProducts ;
             rdf:about "https://en.wikipedia.org/wiki/Wheat_flour"@en ;
@@ -2661,14 +2661,14 @@ Save"""@en ;
             rdfs:label "WheatFlour"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Wines
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Wines
 :Wines rdf:type owl:Class ;
        rdfs:subClassOf :Flavorings ;
        rdf:type owl:Class ;
        rdfs:label "Wines"^^xsd:string .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#WinterSquash
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#WinterSquash
 :WinterSquash rdf:type owl:Class ;
               rdfs:subClassOf :FruitVegetables ;
               rdf:type owl:Class ;
@@ -2679,208 +2679,208 @@ Save"""@en ;
 #    Individuals
 #################################################################
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#nounit
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#nounit
 :nounit a qudt:Unit .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#1
 :1 a qudt:QuantityValue ;
                                   qudt:hasNumericValue "1.0"^^xsd:double .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1By2
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#1By2
 :1By2 a qudt:QuantityValue ;
                                      qudt:hasNumericValue "0.5"^^xsd:double  .
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1By2Teaspoon
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#1By2Teaspoon
 :1By2Teaspoon qudt:hasQuantityValue :1By2 ;
                                              qudt:hasUnit :Teaspoon ;
                                              a qudt:Quantity .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1By4
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#1By4
 :1By4 qudt:hasNumericValue "0.25"^^xsd:double ;
                                      a qudt:QuantityValue  .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1By4Cup
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#1By4Cup
 :1By4Cup qudt:hasQuantityValue :1By4 ;
                                         qudt:hasUnit :Cup ;
                                         a qudt:Quantity  .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1Can
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#1Can
 :1Can qudt:hasQuantityValue :1 ;
                                      qudt:hasUnit :Can ;
                                      a qudt:Quantity .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1Lb
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#1Lb
 :1Lb qudt:hasQuantityValue :1 ;
                                     qudt:hasUnit :Lb ;
                                     a qudt:Quantity  .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1Package
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#1Package
 :1Package qudt:hasQuantityValue :1 ;
                                          qudt:hasUnit :Package ;
                                          a qudt:Quantity .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1Tablespoon
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#1Tablespoon
 :1Tablespoon qudt:hasQuantityValue :1 ;
                                             qudt:hasUnit :Tablespoon ;
                                             a qudt:Quantity .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#1-
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#1-
 :1- qudt:hasQuantityValue :1 ;
                                    qudt:hasUnit :nounit ;
                                    a qudt:Quantity .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#2
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#2
 :2 qudt:hasNumericValue "2.0"^^xsd:double ;
                                   a qudt:QuantityValue  .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#2Tablespoon
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#2Tablespoon
 :2Tablespoon qudt:hasQuantityValue :2 ;
                                             qudt:hasUnit :Tablespoon ;
                                             a qudt:Quantity .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#2Teaspoon
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#2Teaspoon
 :2Teaspoon qudt:hasQuantityValue :2 ;
                                           qudt:hasUnit :Teaspoon ;
                                           a qudt:Quantity .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#AR
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#AR
 :AR <https://schema.org/ratingCount> 5 ;
     <https://schema.org/reviewCount> 5 ;
     a <https://schema.org/AggregateRating> .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Add
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Add
 :Add seq:directlyPrecedes :Cook ;
      a :Preparatory .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Add2
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Add2
 :Add2 seq:directlyPrecedes :Simmer1 ;
       a :Preparatory .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Add3
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Add3
 :Add3 seq:directlyPrecedes :Simmer2 ;
       a :Preparatory .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Bake
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Bake
 :Bake a :Cooking .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Basil
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Basil
 :Basil :hasFlavorIngredient :Flavor ;
        :hasPreparatoryAction :Add ;
        :hasQuantity :1By2Teaspoon ;
        a :Herbs .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#BeefBroth
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#BeefBroth
 :BeefBroth :hasPreparatoryAction :Add3 ;
            :hasQuantity :1Can ;
            :hasSideIngredient :Side ;
            a :Stocks .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Can
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Can
 :Can a qudt:Unit  .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cook
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Cook
 :Cook seq:directlyPrecedes :Stir ;
       a :Cooking .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Cup
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Cup
 :Cup a qudt:Unit .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Divide
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Divide
 :Divide seq:directlyPrecedes :Bake ;
         a :Preparatory .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Flavor
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Flavor
 :Flavor a  :FlavorIngredient .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#FrenchBaguette
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#FrenchBaguette
 :FrenchBaguette :hasPreparatoryAction :Split ;
                 :hasQuantity :1- ;
                 :hasSideIngredient :Side ;
                 a :Bread .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Garlic
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Garlic
 :Garlic :hasFlavorIngredient :Flavor ;
         :hasPreparatoryAction :Add ;
         :hasQuantity :1Tablespoon ;
         a :Flavorings .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#GarlicAndHerbBoursinCheese
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#GarlicAndHerbBoursinCheese
 :GarlicAndHerbBoursinCheese :hasMainIngredient :MainIngredient ;
                             :hasPreparatoryAction :Spread ;
                             :hasQuantity :1Package ;
                             a :Cheese .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Heat
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Heat
 :Heat seq:directlyPrecedes :Add ;
       a :Cooking .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Heat2
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Heat2
 :Heat2 seq:directlyPrecedes :Split ;
        a :Cooking .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Lb
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Lb
 :Lb a qudt:Unit .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Lorraine
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Lorraine
 :Lorraine <https://schema.org/datePublished> "27-1-2009"^^xsd:string ;
           <https://schema.org/givenName> "Lorraine L"^^xsd:string ;
           a <https://schema.org/Person> .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Main
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Main
 :Main a :MainIngredient .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#OliveOil
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#OliveOil
 :OliveOil :hasCookingAction :Heat ;
           :hasQuantity :2Teaspoon ;
           :hasSideIngredient :Side ;
           a :OilCookingSprays .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Onion
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Onion
 :Onion :hasFlavorIngredient :Flavor ;
        :hasPreparatoryAction :Add ;
        :hasQuantity :2Tablespoon ;
        a :Vegetable .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Package
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Package
 :Package a qudt:Unit .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#ROAST-BEEF-DIP-SANDWICH-WITH-HERBED-GARLIC-AU-JUS
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#ROAST-BEEF-DIP-SANDWICH-WITH-HERBED-GARLIC-AU-JUS
 :ROAST-BEEF-DIP-SANDWICH-WITH-HERBED-GARLIC-AU-JUS a <https://schema.org/Recipe> ;
 			<https://schema.org/author> :Lorraine ;
                                                    :hasAggregateRating :AR ;
@@ -2907,77 +2907,77 @@ Save"""@en ;
                                                                   :Yougurt ,
                                                                   :Ginger .
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#RedWine
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#RedWine
 :RedWine :hasFlavorIngredient :Flavor ;
          :hasPreparatoryAction :Add2 ;
          :hasQuantity :1By4Cup ;
          a :Alcohol .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Refrigerate
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Refrigerate
 :Refrigerate seq:directlyPrecedes :Heat2 ;
              a :PostCooking .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#RoastBeef
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#RoastBeef
 :RoastBeef :hasMainIngredient :MainIngredient ;
            :hasPreparatoryAction :Divide ;
            :hasQuantity :1Lb ;
            a :Beef .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Side
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Side
 :Side a :SideIngredient .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Simmer1
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Simmer1
 :Simmer1 seq:directlyPrecedes :Add3 ;
          a :Cooking .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Simmer2
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Simmer2
 :Simmer2 seq:directlyPrecedes :Refrigerate ;
          a :Cooking .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#SoySauce
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#SoySauce
 :SoySauce :hasFlavorIngredient :Flavor ;
           :hasPreparatoryAction :Add2 ;
           :hasQuantity :2Tablespoon ;
           a :Flavorings .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Split
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Split
 :Split seq:directlyPrecedes :Spread ;
        a :Preparatory .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Spread
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Spread
 :Spread seq:directlyPrecedes :Divide ;
         a :Preparatory .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Stir
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Stir
 :Stir seq:directlyPrecedes :Add2 ;
       a :Preparatory .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Tablespoon
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Tablespoon
 :Tablespoon a qudt:Unit .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Teaspoon
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Teaspoon
 :Teaspoon a qudt:Unit .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#Thyme
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#Thyme
 :Thyme :hasFlavorIngredient :Flavor ;
        :hasPreparatoryAction :Add ;
        :hasQuantity :1By2Teaspoon ;
        a :Herbs .
 
 
-###  https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#WorcestershireSauce
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#WorcestershireSauce
 :WorcestershireSauce :hasFlavorIngredient :Flavor ;
                      :hasPreparatoryAction :Add2 ;
                      :hasQuantity :2Teaspoon ;
