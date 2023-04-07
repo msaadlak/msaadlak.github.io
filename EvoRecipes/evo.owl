@@ -1,0 +1,423 @@
+@prefix : <https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix po: <http://purl.obolibrary.org/obo/po.owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <https://www.w3.org/2002/07/owl#> .
+@prefix rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix xml: <https://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <https://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/2.1/schema/qudt#> .
+@prefix rdfs: <https://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix foodon: <http://purl.obolibrary.org/obo/foodon.owl#> .
+@base <https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl> .
+
+<https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl> a owl:Ontology ;
+                                        owl:versionIRI <https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#v/1.0> ;
+                                        dc:publisher "Recipe Evolution Group" ;
+                                        dc:title "RecipeOn Ontology" ;
+                                        terms:contributor <https://hajirajabeen.github.io> ,
+                                                          <https://github.com/fahad-maqbool> ,
+                                                          <https://github.com/msaadlak> ;
+                                        terms:created "2022/06/15"^^xsd:date ;
+                                        terms:creator <https://github.com/msaadlak> ;
+                                        terms:description "RecipeOn assists machines in understanding the semantics of recipes to encode the information crucial for personalized recipe generation. This includes nutritional information, ingredient-action relations, ingredient-diet relations, ingredient substitutions, and cooking time." ;
+                                        terms:hasVersion 1.0 ;
+                                        terms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                        terms:modified "2023/03/22" ;
+                                        terms:title "The RecipeOn Ontology (recipeon)"@en ;
+                                        rdfs:comment "RecipeOn assists machines in understanding the semantics of recipes to encode the information crucial for personalized recipe generation. This includes nutritional information, ingredient-action relations, ingredient-diet relations, ingredient substitutions, and cooking time." ;
+                                        rdfs:isDefinedBy <https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl> ;
+                                        rdfs:label "The RecipeOn Ontology"@en ;
+                                        rdfs:seeAlso <https://hajirajabeen.github.io/EvoRecipesOntology/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty ;
+             rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty ;
+         rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+terms:contributor rdf:type owl:AnnotationProperty ;
+                  rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+terms:created rdf:type owl:AnnotationProperty ;
+              rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+terms:creator rdf:type owl:AnnotationProperty ;
+              rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty ;
+                  rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+terms:hasVersion rdf:type owl:AnnotationProperty ;
+                 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty ;
+              rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+terms:modified rdf:type owl:AnnotationProperty ;
+               rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty ;
+            rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns/about
+rdf:about rdf:type owl:AnnotationProperty ;
+          rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns/type
+rdf:type rdf:type owl:AnnotationProperty ;
+         rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://qudt.org/2.1/schema/qudt/hasQuantityValue
+qudt:hasQuantityValue rdf:type owl:ObjectProperty ;
+                      rdfs:domain qudt:Quantity ;
+                      rdfs:range qudt:QuantityValue ;
+                      rdf:type owl:AsymmetricProperty ,
+                               owl:ObjectProperty ;
+                      rdfs:label "has quantity value"@en .
+
+
+###  http://qudt.org/2.1/schema/qudt/hasUnit
+qudt:hasUnit rdf:type owl:ObjectProperty ;
+             rdfs:domain qudt:Quantity ;
+             rdfs:range qudt:Unit ;
+             rdf:type owl:ObjectProperty ;
+             rdfs:label "has unit"@en .
+
+
+###  https://schema.org/author
+<https://schema.org/author> rdf:type owl:ObjectProperty ;
+                           rdfs:domain <https://schema.org/Recipe> ;
+                           rdfs:range <https://schema.org/Person> ;
+                           rdf:type owl:ObjectProperty ;
+                           rdfs:label "author"@en .
+
+
+###  https://schema.org/cookTime
+<https://schema.org/cookTime> rdf:type owl:ObjectProperty ;
+                             rdfs:domain <https://schema.org/Recipe> ;
+                             rdfs:range qudt:Quantity ;
+                             rdf:type owl:ObjectProperty ;
+                             rdfs:label "cook time"@en .
+
+
+###  https://schema.org/hasPart
+<https://schema.org/hasPart> rdf:type owl:ObjectProperty ;
+                            rdfs:domain <https://schema.org/Recipe> ;
+                            rdfs:range [ rdf:type owl:Class ;
+                                         owl:unionOf ( :Ingredient
+                                                       :Procedure
+                                                     )
+                                       ] ;
+                            rdf:type owl:ObjectProperty .
+
+
+###  https://schema.org/nutrition
+<https://schema.org/nutrition> rdf:type owl:ObjectProperty ;
+                              rdfs:domain <https://schema.org/Recipe> ;
+                              rdfs:range <https://schema.org/NutritionInformation> ;
+                              rdf:type owl:ObjectProperty ;
+                              rdfs:label "nutrition"@en .
+
+
+###  https://schema.org/prepTime
+<https://schema.org/prepTime> rdf:type owl:ObjectProperty ;
+                             rdfs:domain <https://schema.org/Recipe> ;
+                             rdfs:range qudt:Quantity ;
+                             rdf:type owl:ObjectProperty ;
+                             rdfs:label "prep time"@en .
+
+
+###  https://schema.org/totalTime
+<https://schema.org/totalTime> rdf:type owl:ObjectProperty ;
+                              rdfs:domain <https://schema.org/Recipe> ;
+                              rdfs:range qudt:Quantity ;
+                              rdf:type owl:ObjectProperty ;
+                              rdfs:label "total time"@en .
+
+
+###  https://schema.org/yield
+<https://schema.org/yield> rdf:type owl:ObjectProperty ;
+                          rdfs:domain <https://schema.org/Recipe> ;
+                          rdfs:range qudt:Quantity ;
+                          rdf:type owl:ObjectProperty ;
+                          rdfs:label "yield"@en .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows
+seq:directlyFollows rdf:type owl:ObjectProperty ;
+                    owl:inverseOf seq:directlyPrecedes ;
+                    rdfs:domain owl:Action ;
+                    rdfs:range owl:Action ;
+                    rdf:type owl:ObjectProperty ;
+                    rdfs:label "directily follows"@en .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes
+seq:directlyPrecedes rdf:type owl:ObjectProperty ;
+                     rdfs:domain owl:Action ;
+                     rdfs:range owl:Action ;
+                     rdf:type owl:ObjectProperty ;
+                     rdfs:label "directly precedes"@en .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows
+seq:follows rdf:type owl:ObjectProperty ;
+            owl:inverseOf seq:precedes ;
+            rdfs:domain owl:Action ;
+            rdfs:range owl:Action ;
+            owl:propertyChainAxiom ( seq:directlyFollows
+                                     seq:directlyFollows
+                                   ) ;
+            rdf:type owl:ObjectProperty ;
+            rdfs:label "follows"@en .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes
+seq:precedes rdf:type owl:ObjectProperty ;
+             rdfs:domain owl:Action ;
+             rdfs:range owl:Action ;
+             owl:propertyChainAxiom ( seq:directlyPrecedes
+                                      seq:directlyPrecedes
+                                    ) ;
+             rdf:type owl:ObjectProperty ;
+             rdfs:label "precedes"@en .
+
+
+###  http://www.w3.org/2002/07/owl#has_duration
+owl:has_duration rdf:type owl:ObjectProperty ;
+                 rdfs:domain owl:Action ;
+                 rdfs:range qudt:Quantity ;
+                 rdf:type owl:ObjectProperty ;
+                 rdfs:label "has duration"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#alternateAction
+:alternateAction rdf:type owl:ObjectProperty ;
+                 rdfs:domain owl:Action ;
+                 rdfs:range owl:Action ;
+                 rdf:type owl:ObjectProperty ,
+                          owl:SymmetricProperty ;
+                 rdfs:label "Alternate Action"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#directlyFollowsProcedure
+:directlyFollowsProcedure rdf:type owl:ObjectProperty ;
+                          owl:inverseOf :directlyPrecedesProcedure ;
+                          rdfs:domain :Procedure ;
+                          rdfs:range :Procedure ;
+                          rdf:type owl:ObjectProperty ;
+                          rdfs:label "directly follows procedures"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#directlyPrecedesProcedure
+:directlyPrecedesProcedure rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Procedure ;
+                           rdfs:range :Procedure ;
+                           rdf:type owl:ObjectProperty ;
+                           rdfs:label "directly precedes procedure"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasAction
+:hasAction rdf:type owl:ObjectProperty ;
+           owl:inverseOf :hasActionIngredient ;
+           rdfs:domain :Ingredient ;
+           rdfs:range owl:Action ;
+           rdf:type owl:ObjectProperty ;
+           rdfs:label "has action"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasActionIngredient
+:hasActionIngredient rdf:type owl:ObjectProperty ;
+                     rdfs:domain owl:Action ;
+                     rdfs:range :Ingredient ;
+                     rdf:type owl:ObjectProperty ;
+                     rdfs:label "has action ingredient"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasActionProcedure
+:hasActionProcedure rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :hasProcedureAction ;
+                    rdfs:domain owl:Action ;
+                    rdfs:range :Procedure ;
+                    rdf:type owl:ObjectProperty ;
+                    rdfs:label "has action procedure"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasAggregateRating
+:hasAggregateRating rdf:type owl:ObjectProperty ;
+                    rdfs:domain <https://schema.org/Recipe> ;
+                    rdfs:range <https://schema.org/AggregateRating> ;
+                    rdf:type owl:FunctionalProperty ,
+                             owl:ObjectProperty ;
+                    rdfs:label "has aggregate rating"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasAlternateIngredient
+:hasAlternateIngredient rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Ingredient ;
+                        rdfs:range :Ingredient ;
+                        rdf:type owl:ObjectProperty ,
+                                 owl:SymmetricProperty ;
+                        rdfs:label "has alternate ingredient"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasAlternateProcedure
+:hasAlternateProcedure rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Procedure ;
+                       rdfs:range :Procedure ;
+                       rdf:type owl:ObjectProperty ,
+                                owl:SymmetricProperty ;
+                       rdfs:label "has alternate procedure"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasCookingAction
+:hasCookingAction rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasAction ;
+                  rdfs:domain :Ingredient ;
+                  rdfs:range :Cooking ;
+                  rdf:type owl:ObjectProperty ;
+                  rdfs:label "has cooking action"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasFlavorIngredient
+:hasFlavorIngredient rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasType ;
+                     rdfs:domain :Ingredient ;
+                     rdfs:range :FlavorIngredient ;
+                     rdf:type owl:ObjectProperty ;
+                     rdfs:label "has flavor ingredient"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasIngredient
+:hasIngredient rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <https://schema.org/hasPart> ;
+               rdfs:domain <https://schema.org/Recipe> ;
+               rdfs:range :Ingredient ;
+               rdf:type owl:ObjectProperty ;
+               rdfs:label "has ingredient"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasMainIngredient
+:hasMainIngredient rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasType ;
+                   rdfs:domain :Ingredient ;
+                   rdfs:range :MainIngredient ;
+                   rdf:type owl:ObjectProperty ;
+                   rdfs:label "has main ingredient"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasNutrientQuantity
+:hasNutrientQuantity rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Nutrient ;
+                     rdfs:range qudt:Quantity ;
+                     rdf:type owl:ObjectProperty .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasNutrientType
+:hasNutrientType rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://schema.org/NutritionInformation> ;
+                 rdfs:range :Nutrient ;
+                 rdf:type owl:ObjectProperty .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasPostCookingAction
+:hasPostCookingAction rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasAction ;
+                      rdfs:domain :Ingredient ;
+                      rdfs:range :PostCooking ;
+                      rdf:type owl:ObjectProperty ;
+                      rdfs:label "has post cooking action"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasPreparatoryAction
+:hasPreparatoryAction rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasAction ;
+                      rdfs:domain :Ingredient ;
+                      rdfs:range :Preparatory ;
+                      rdf:type owl:ObjectProperty ;
+                      rdfs:label "has preparatory action"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasProcedure
+:hasProcedure rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <https://schema.org/hasPart> ;
+              rdfs:domain <https://schema.org/Recipe> ;
+              rdfs:range :Procedure ;
+              rdf:type owl:ObjectProperty ;
+              rdfs:label "has procedure"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasProcedureAction
+:hasProcedureAction rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Procedure ;
+                    rdfs:range owl:Action ;
+                    rdf:type owl:ObjectProperty ;
+                    rdfs:label "has procedure action"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasProcedureIngredient
+:hasProcedureIngredient rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Procedure ;
+                        rdfs:range :Ingredient ;
+                        rdf:type owl:ObjectProperty ;
+                        rdfs:label "hasProcedureAction"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasQuantity
+:hasQuantity rdf:type owl:ObjectProperty ;
+             rdfs:domain :Ingredient ;
+             rdfs:range qudt:Quantity ;
+             rdf:type owl:ObjectProperty ;
+             rdfs:label "has quantity"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasSideIngredient
+:hasSideIngredient rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasType ;
+                   rdfs:domain :Ingredient ;
+                   rdfs:range :SideIngredient ;
+                   rdf:type owl:ObjectProperty ;
+                   rdfs:label "has side ingredient"@en .
+
+
+###  https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#hasType
+:hasType rdf:type owl:ObjectProperty ;
+         rdfs:domain :Ingredient ;
+         rdfs:range :IngredientType ;
+         rdf:type owl:ObjectProperty ;
+         rdfs:label "has type"@en .
+
+
