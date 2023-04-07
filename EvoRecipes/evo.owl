@@ -15,8 +15,8 @@
 
 <https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl> a owl:Ontology ;
                                         owl:versionIRI <https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#v/1.0> ;
-                                        dc:publisher "Recipe Evolution Group" ;
-                                        dc:title "RecipeOn Ontology" ;
+                                        dc:publisher "Recipe Evolution Group"@en ;
+                                        dc:title "RecipeOn Ontology"@en ;
                                         terms:contributor <https://hajirajabeen.github.io> ,
                                                           <https://github.com/fahad-maqbool> ,
                                                           <https://github.com/msaadlak> ;
