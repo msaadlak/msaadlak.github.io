@@ -1,4 +1,4 @@
-@prefix : <https://purl.org/net/recipeon#> .
+@prefix : <https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix po: <http://purl.obolibrary.org/obo/po.owl#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -11,9 +11,9 @@
 @prefix rdfs: <https://www.w3.org/2000/01/rdf-schema#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix foodon: <http://purl.obolibrary.org/obo/foodon.owl#> .
-@base <https://purl.org/net/recipeon> .
+@base <https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl> .
 
-<https://purl.org/net/recipeon> a owl:Ontology ;
+<https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl> a owl:Ontology ;
                                         owl:versionIRI <https://purl.org/net/recipeon/v/1.0> ;
                                         dc:publisher "Recipe Evolution Group" ;
                                         dc:title "RecipeOn Ontology" ;
