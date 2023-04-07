@@ -13,7 +13,7 @@
 @prefix foodon: <http://purl.obolibrary.org/obo/foodon.owl#> .
 @base <https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl> .
 
-<https://raw.githubusercontent.com/HajiraJabeen/EvoRecipesOntology/main/recipeon.owl> a owl:Ontology ;
+<https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl> a owl:Ontology ;
                                         owl:versionIRI <https://raw.githubusercontent.com/msaadlak/msaadlak.github.io/main/EvoRecipes/evo.owl#v/1.0> ;
                                         dc:publisher "Recipe Evolution Group" ;
                                         dc:title "RecipeOn Ontology" ;
